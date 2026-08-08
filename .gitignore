@@ -1,0 +1,14 @@
+.next/
+.open-next/
+node_modules/
+
+.env
+.env.*
+!.env.example
+
+.wrangler/
+.dev.vars
+
+.DS_Store
+*.log
+
