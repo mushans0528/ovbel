@@ -1,5 +1,15 @@
 export type Specification = { label: string; value: string };
 
+export type ProductPattern = {
+  name: string;
+  description: string;
+};
+
+export type ProductSeo = {
+  title: string;
+  description: string;
+};
+
 export type Product = {
   slug: string;
   name: string;
@@ -10,6 +20,13 @@ export type Product = {
   features: string[];
   applications: string[];
   specifications: Specification[];
+  applicationIntro?: string;
+  featureHeading?: string;
+  patterns?: ProductPattern[];
+  precautions?: string[];
+  inquiryChecklist?: string[];
+  seo?: ProductSeo;
+  sourceUrl?: string;
 };
 
 export type Category = {
@@ -78,16 +95,45 @@ export const products: Product[] = [
     name: "Chevron Conveyor Belt",
     category: "conveyor-belts",
     eyebrow: "Inclined conveying",
-    summary: "Patterned belting for stable transport of powder, granules and bulk material on slopes.",
-    description: "Chevron conveyor belts use an integrally vulcanized profile to improve grip and drainage while reducing material rollback on inclined conveyors.",
-    features: ["Anti-slip profiles vulcanized with the top cover", "Multiple profile geometries", "Custom pattern design available"],
-    applications: ["Mining and aggregate", "Grain and bulk handling", "Packaging and processing"],
+    summary: "Patterned conveyor belting for stable handling of powder, granules and bulk material on inclined systems.",
+    description: "Raised profiles are vulcanized together with the top cover to improve grip, support drainage and reduce material rollback. Profile geometry can be selected or designed around the material and conveying conditions.",
+    applicationIntro: "Chevron conveyor belts are used where a smooth belt may allow powdery, granular or block materials to slide or roll back. The 0–40° reference range is confirmed against the material, moisture, particle size, belt speed and loading method before quotation.",
+    featureHeading: "Profiles matched to the conveying duty.",
+    features: [
+      "Anti-slip raised profiles improve material grip on inclined conveyors",
+      "Profiles and the top cover are vulcanized as an integral construction",
+      "Profile shape, angle and spacing can be selected around the application",
+      "The patterned surface supports effective drainage",
+      "Custom profile designs are available for suitable projects",
+    ],
+    applications: ["Mining and aggregate handling", "Grain and agricultural products", "Powder and granular materials", "Bagged and packaged goods", "General bulk-material conveying"],
+    patterns: [
+      { name: "Herringbone", description: "A directional profile for controlled material movement." },
+      { name: "Figure 8", description: "A linked profile layout for distributed grip." },
+      { name: "Fishbone", description: "Angled branches that guide and retain material." },
+      { name: "U-shaped", description: "Open profiles selected around flow and drainage." },
+      { name: "Cylindrical", description: "Raised contact points for application-specific handling." },
+      { name: "Hemp-faced", description: "A textured surface for added contact and traction." },
+    ],
     specifications: [
-      { label: "Carcass options", value: "CC, CP, NN, EP" },
-      { label: "Reference width", value: "300–800 mm" },
+      { label: "Carcass options", value: "Cotton canvas (CC), polyester-cotton (CP), nylon (NN), polyester (EP)" },
+      { label: "Reference belt width", value: "300–800 mm" },
       { label: "Profile height", value: "5 / 10 / 15 / 20 mm" },
       { label: "Reference inclination", value: "0–40°" },
+      { label: "Profile geometry", value: "Standard options or custom design" },
     ],
+    precautions: [
+      "Keep the belt clean during transport and storage",
+      "Protect it from direct sunlight, rain and snow",
+      "Avoid contact with acids, alkalis, oils and organic solvents",
+      "Store the belt at least one metre away from heating equipment",
+    ],
+    inquiryChecklist: ["Conveyed material", "Conveyor inclination", "Belt width and length", "Preferred profile and height", "Carcass and cover requirement", "Quantity and destination"],
+    seo: {
+      title: "Chevron Conveyor Belt for Inclined Material Handling",
+      description: "Chevron conveyor belts with CC, CP, NN or EP carcass options, 300–800 mm reference widths and customizable profiles for inclined bulk-material handling.",
+    },
+    sourceUrl: "https://www.respowerbelt.com/h-col-114.html",
   },
   {
     slug: "rough-top-conveyor-belt",
@@ -279,7 +325,49 @@ const zhCategories: Record<string, Pick<Category, "name" | "shortName" | "summar
 };
 
 const zhProducts: Record<string, Omit<Product, "slug" | "category">> = {
-  "chevron-conveyor-belt": { name: "花纹输送带", eyebrow: "倾斜输送", summary: "用于在斜坡上稳定输送粉状、颗粒状和块状物料的花纹输送带。", description: "花纹输送带采用与上覆盖胶整体硫化的凸起花纹，提高抓附与排水能力，并减少物料在倾斜输送过程中的回落。", features: ["防滑花纹与上覆盖胶整体硫化", "多种花纹结构可选", "支持客户定制花纹"], applications: ["矿山与砂石骨料", "粮食与散料输送", "包装与加工"], specifications: [{ label: "带芯选择", value: "CC、CP、NN、EP" }, { label: "参考宽度", value: "300–800 mm" }, { label: "花纹高度", value: "5 / 10 / 15 / 20 mm" }, { label: "参考倾角", value: "0–40°" }] },
+  "chevron-conveyor-belt": {
+    name: "花纹输送带",
+    eyebrow: "倾斜输送",
+    summary: "用于在倾斜输送系统中稳定输送粉状、颗粒状和块状物料的花纹输送带。",
+    description: "凸起花纹与上覆盖胶整体硫化，可增强抓附、改善排水并减少物料回落。花纹结构可根据物料特性和输送工况选择或定制。",
+    applicationIntro: "当光面输送带可能导致粉状、颗粒状或块状物料下滑或回滚时，可以使用花纹输送带。0–40° 为参考范围，报价前需结合物料、含水率、粒径、带速和装载方式确认。",
+    featureHeading: "围绕输送工况匹配花纹结构。",
+    features: [
+      "凸起防滑花纹增强倾斜输送时的物料抓附",
+      "花纹与上覆盖胶采用整体硫化结构",
+      "可根据应用选择花纹形状、角度和间距",
+      "花纹表面具有良好的排水性能",
+      "合适的项目支持定制花纹设计",
+    ],
+    applications: ["矿山与砂石骨料", "粮食与农产品", "粉状与颗粒物料", "袋装与包装货物", "通用散料输送"],
+    patterns: [
+      { name: "人字形", description: "用于控制物料移动的定向花纹。" },
+      { name: "8 字形", description: "通过连续结构分散抓附区域。" },
+      { name: "鱼骨形", description: "倾斜分支有助于引导和保持物料。" },
+      { name: "U 形", description: "围绕物料流动与排水要求选择。" },
+      { name: "圆柱形", description: "按应用配置凸起接触点。" },
+      { name: "麻面", description: "通过纹理表面增加接触和摩擦。" },
+    ],
+    specifications: [
+      { label: "带芯选择", value: "棉帆布（CC）、涤棉帆布（CP）、尼龙（NN）、聚酯帆布（EP）" },
+      { label: "参考带宽", value: "300–800 mm" },
+      { label: "花纹高度", value: "5 / 10 / 15 / 20 mm" },
+      { label: "参考倾角", value: "0–40°" },
+      { label: "花纹结构", value: "常规选项或定制设计" },
+    ],
+    precautions: [
+      "运输和储存期间保持输送带清洁",
+      "避免阳光直射以及雨雪侵袭",
+      "避免接触酸、碱、油和有机溶剂",
+      "与加热装置保持至少一米距离",
+    ],
+    inquiryChecklist: ["输送物料", "输送倾角", "带宽与带长", "花纹类型与高度", "带芯与覆盖胶要求", "数量与目的地"],
+    seo: {
+      title: "倾斜物料输送用花纹输送带",
+      description: "提供 CC、CP、NN、EP 带芯选择、300–800 mm 参考带宽和可定制花纹结构的倾斜物料输送带。",
+    },
+    sourceUrl: "https://www.respowerbelt.com/h-col-114.html",
+  },
   "rough-top-conveyor-belt": { name: "粗面输送带", eyebrow: "包装输送", summary: "高摩擦上覆盖层，适合在水平或倾斜输送机上输送纸箱、袋装货物和包裹。", description: "耐磨纹理橡胶表面可缓冲轻型货物、吸收振动，并在输送过程中帮助防止打滑。", features: ["2 层或 3 层 EP 结构", "可选底覆盖胶或裸背", "缓冲型高摩擦表面"], applications: ["仓储物流", "包裹处理", "袋装与箱装货物输送"], specifications: [{ label: "结构", value: "2 层或 3 层 EP 织物" }, { label: "上覆盖胶参考值", value: "3.2 mm" }, { label: "底部", value: "1.6 mm 或裸背" }, { label: "参考倾角", value: "最大约 35°" }] },
   "transmission-flat-belt": { name: "平型传动带", eyebrow: "机械动力传递", summary: "用于工业和农业传动系统的帆布增强平型橡胶带。", description: "以棉帆布为骨架层的传统平型传动带，可在各类加工设备中稳定传递动力。", features: ["切边与包边结构", "多种盎司等级", "支持灵活定制尺寸"], applications: ["工厂与码头", "粮食加工", "灌溉与木工设备"], specifications: [{ label: "参考等级", value: "28 / 30 / 32 / 34 / 36 OZ" }, { label: "增强层", value: "棉帆布" }, { label: "边缘选择", value: "切边 / 包边" }] },
   "industrial-v-belt": { name: "工业 V 带", eyebrow: "紧凑型驱动系统", summary: "根据带轮、电机和机械设备驱动结构选配的工业 V 带。", description: "OVBEL 为工业设备提供多种 V 带方案，可根据驱动结构和工作环境匹配带型、长度与增强结构。", features: ["按应用匹配带型", "提供驱动系统选型支持", "支持定制供货方案"], applications: ["工业机械", "输送机驱动", "加工设备"], specifications: [{ label: "带型", value: "根据应用选择" }, { label: "长度", value: "支持定制供货" }, { label: "结构", value: "包布或切边结构" }] },

@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 
-export function InquiryForm({ defaultProduct = "", locale = "en" }: { defaultProduct?: string; locale?: "en" | "zh" }) {
+export function InquiryForm({ defaultProduct = "", productSlug = "", locale = "en" }: { defaultProduct?: string; productSlug?: string; locale?: "en" | "zh" }) {
   const [status, setStatus] = useState("");
 
   function submitInquiry(event: FormEvent<HTMLFormElement>) {
@@ -15,6 +15,7 @@ export function InquiryForm({ defaultProduct = "", locale = "en" }: { defaultPro
       `Email: ${data.get("email")}`,
       `Country: ${data.get("country")}`,
       `Product: ${data.get("product")}`,
+      `Product reference: ${data.get("productSlug") || "Not specified"}`,
       "",
       String(data.get("message") || ""),
     ].join("\n"));
@@ -24,6 +25,7 @@ export function InquiryForm({ defaultProduct = "", locale = "en" }: { defaultPro
 
   return (
     <form className="inquiry-form" onSubmit={submitInquiry}>
+      <input type="hidden" name="productSlug" value={productSlug} />
       <div className="form-row"><label>{locale === "zh" ? "姓名" : "Full name"}<input name="name" autoComplete="name" required /></label><label>{locale === "zh" ? "公司" : "Company"}<input name="company" autoComplete="organization" required /></label></div>
       <div className="form-row"><label>{locale === "zh" ? "商务邮箱" : "Business email"}<input name="email" type="email" autoComplete="email" required /></label><label>{locale === "zh" ? "国家 / 地区" : "Country / region"}<input name="country" autoComplete="country-name" required /></label></div>
       <label>{locale === "zh" ? "产品或零件参考" : "Product or part reference"}<input name="product" defaultValue={defaultProduct} placeholder={locale === "zh" ? "产品、型号、OEM 编号或图纸编号" : "Product, model, OEM number or drawing reference"} /></label>

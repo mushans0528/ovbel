@@ -8,7 +8,7 @@ export function ProductCard({ product, locale = "en" }: { product: Product; loca
   const category = getLocalizedCategory(product.category, locale);
   return (
     <article className="product-card">
-      <ProductVisual category={category} label={product.eyebrow} />
+      <ProductVisual category={category} label={product.eyebrow} productSlug={product.slug} />
       <div className="product-card-body">
         <p className="eyebrow">{category?.name}</p>
         <h3>{product.name}</h3>
