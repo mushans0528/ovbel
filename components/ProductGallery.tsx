@@ -41,7 +41,6 @@ export function ProductGallery({ images, productName, locale }: { images: string
       <button type="button" className="product-gallery-main" onClick={() => setIsLightboxOpen(true)} aria-label={enlargeLabel}>
         <Image src={images[activeImage]} alt={imageLabel(activeImage)} fill priority sizes="(max-width: 720px) 100vw, 50vw" />
         <span>{String(activeImage + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}</span>
-        <b aria-hidden="true">⌕</b>
       </button>
       <div className="product-gallery-thumbnails" aria-label={locale === "zh" ? "产品图库" : "Product gallery"}>
         {images.map((image, index) => (

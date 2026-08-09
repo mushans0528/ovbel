@@ -30,7 +30,6 @@ export function ZoomableImage({ src, alt, sizes, closeLabel }: { src: string; al
     <>
       <button type="button" className="pattern-image zoomable-image" onClick={() => setIsOpen(true)} aria-label={enlargeLabel}>
         <Image src={src} alt={alt} fill sizes={sizes} />
-        <b aria-hidden="true">⌕</b>
       </button>
       {isOpen ? (
         <div className="product-lightbox" role="dialog" aria-modal="true" aria-label={alt} onMouseDown={(event) => { if (event.target === event.currentTarget) setIsOpen(false); }}>

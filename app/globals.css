@@ -178,7 +178,6 @@ p { margin-top: 0; }
 .product-gallery-main img { object-fit: cover; transition: transform .35s ease; }
 .product-gallery-main:hover img { transform: scale(1.025); }
 .product-gallery-main > span { padding: 8px 10px; position: absolute; z-index: 2; left: 18px; bottom: 18px; color: white; background: rgba(6,31,61,.82); font-size: .7rem; font-weight: 850; letter-spacing: .08em; }
-.product-gallery-main > b { width: 42px; height: 42px; position: absolute; z-index: 2; right: 18px; top: 18px; display: grid; place-items: center; color: white; background: rgba(6,31,61,.82); border-radius: 50%; font-size: 1.35rem; font-weight: 500; }
 .product-gallery-main:focus-visible, .product-gallery-thumbnails button:focus-visible, .product-lightbox button:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
 .product-gallery-thumbnails { display: grid; grid-template-rows: repeat(4, 1fr); gap: 10px; }
 .product-gallery-thumbnails button { min-height: 0; padding: 0; position: relative; overflow: hidden; border: 2px solid transparent; background: #d8dde1; cursor: pointer; opacity: .58; }
@@ -244,7 +243,6 @@ p { margin-top: 0; }
 .zoomable-image { cursor: zoom-in; }
 .zoomable-image img { transition: transform .3s ease; }
 .zoomable-image:hover img { transform: scale(1.035); }
-.zoomable-image > b { width: 36px; height: 36px; position: absolute; z-index: 2; right: 12px; top: 12px; display: grid; place-items: center; color: white; background: rgba(6,31,61,.82); border-radius: 50%; font-size: 1.1rem; font-weight: 500; }
 .zoomable-image:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
 .pattern-swatch { min-height: 165px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: space-around; gap: 8px; background: #151a1f; }
 .pattern-swatch::before { content: ""; position: absolute; inset: 0; opacity: .3; background-image: linear-gradient(rgba(255,255,255,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.09) 1px, transparent 1px); background-size: 22px 22px; }
