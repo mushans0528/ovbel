@@ -13,6 +13,14 @@ export type ProductSeo = {
 export type ProductMedia = {
   gallery: string[];
   patternImages?: string[];
+  constructionImage?: string;
+  technicalImages?: string[];
+};
+
+export type ProductLayer = {
+  name: string;
+  material: string;
+  purpose: string;
 };
 
 export type Product = {
@@ -33,6 +41,7 @@ export type Product = {
   seo?: ProductSeo;
   sourceUrl?: string;
   media?: ProductMedia;
+  layers?: ProductLayer[];
 };
 
 export type Category = {
@@ -208,15 +217,57 @@ export const products: Product[] = [
     name: "Impact Bed & Bar",
     category: "conveyor-components",
     eyebrow: "Loading-zone protection",
-    summary: "Low-friction impact support for conveyor loading and transfer points.",
-    description: "Impact bars combine rubber, a steel or aluminum frame and UHMWPE to absorb loading energy, stabilize the belt and reduce spillage.",
-    features: ["Low-friction sliding surface", "No moving parts or lubrication", "Reduces belt wear and maintenance"],
-    applications: ["Transfer points", "Crusher discharge", "Heavy bulk loading zones"],
-    specifications: [
-      { label: "Top layer", value: "UHMWPE" },
-      { label: "Cushion", value: "Impact-absorbing rubber" },
-      { label: "Frame", value: "Steel or aluminum" },
+    summary: "A full-width impact support system engineered to protect conveyor belts at demanding loading and transfer points.",
+    description: "Replace impact idlers with a stable, low-friction support surface. Modular impact bars combine UHMWPE, resilient rubber and a reinforced metal profile to absorb loading energy, control belt sag and help keep the sealing line closed.",
+    applicationIntro: "Impact beds support the belt continuously through the loading zone, where falling material, belt deflection and skirt-board leakage are most severe. Bed width, bar configuration and rubber grade are matched to belt width, drop height, lump size and operating duty.",
+    featureHeading: "Control impact at the point where it enters the system.",
+    features: [
+      "Continuous support helps prevent belt sag between conventional idlers",
+      "Low-friction UHMWPE top layer allows the belt to run smoothly",
+      "High-elasticity rubber absorbs impact energy and reduces belt damage",
+      "Modular bars can be inspected and replaced individually",
+      "No rotating parts or lubrication points inside the loading zone",
+      "Adjustable support frames simplify alignment with skirt-board sealing",
     ],
+    applications: ["Primary crusher discharge", "Mine and quarry transfer points", "High-drop loading zones", "Heavy or sharp bulk material", "Skirt-board sealing zones", "Ports and bulk terminals"],
+    specifications: [
+      { label: "Sliding layer", value: "Low-friction UHMWPE" },
+      { label: "Impact cushion", value: "High-elasticity rubber" },
+      { label: "Reinforcement", value: "Aluminum or steel profile" },
+      { label: "Bar construction", value: "Three-layer vulcanized assembly" },
+      { label: "Bed arrangement", value: "Fixed or adjustable support frame" },
+      { label: "Dimensions", value: "Configured to belt width and loading duty" },
+    ],
+    layers: [
+      { name: "Sliding surface", material: "UHMWPE", purpose: "Reduces running friction and heat at the belt interface." },
+      { name: "Energy absorber", material: "Rubber", purpose: "Deflects under impact to protect the belt carcass." },
+      { name: "Structural rail", material: "Aluminum / steel", purpose: "Locks the bar securely to the support frame." },
+    ],
+    precautions: [
+      "Confirm the center and wing-bar heights before commissioning",
+      "Maintain a clean, continuous contact line without excessive belt pressure",
+      "Inspect fasteners and bar wear after the initial operating period",
+      "Replace damaged bars before the reinforcement profile is exposed",
+    ],
+    inquiryChecklist: ["Belt width and speed", "Material and maximum lump size", "Drop height", "Loading-zone length", "Existing idler arrangement", "Site photos or drawings"],
+    seo: {
+      title: "Conveyor Impact Bed & Impact Bars for Loading Zones",
+      description: "Impact beds and three-layer UHMWPE rubber impact bars configured for conveyor loading zones, transfer points and heavy bulk-material handling.",
+    },
+    sourceUrl: "https://www.respowerbelt.com/h-col-128.html",
+    media: {
+      gallery: [
+        "/images/products/impact-bed/impact-bed-installed.webp",
+        "/images/products/impact-bed/impact-bed-set.webp",
+        "/images/products/impact-bed/impact-bar-black.webp",
+      ],
+      constructionImage: "/images/products/impact-bed/impact-bar-red.webp",
+      technicalImages: [
+        "/images/products/impact-bed/technical-drawing.png",
+        "/images/products/impact-bed/specification-table.png",
+        "/images/products/impact-bed/specification-notes.png",
+      ],
+    },
   },
   {
     slug: "elevator-buckets",
@@ -393,7 +444,22 @@ const zhProducts: Record<string, Omit<Product, "slug" | "category">> = {
   "rough-top-conveyor-belt": { name: "粗面输送带", eyebrow: "包装输送", summary: "高摩擦上覆盖层，适合在水平或倾斜输送机上输送纸箱、袋装货物和包裹。", description: "耐磨纹理橡胶表面可缓冲轻型货物、吸收振动，并在输送过程中帮助防止打滑。", features: ["2 层或 3 层 EP 结构", "可选底覆盖胶或裸背", "缓冲型高摩擦表面"], applications: ["仓储物流", "包裹处理", "袋装与箱装货物输送"], specifications: [{ label: "结构", value: "2 层或 3 层 EP 织物" }, { label: "上覆盖胶参考值", value: "3.2 mm" }, { label: "底部", value: "1.6 mm 或裸背" }, { label: "参考倾角", value: "最大约 35°" }] },
   "transmission-flat-belt": { name: "平型传动带", eyebrow: "机械动力传递", summary: "用于工业和农业传动系统的帆布增强平型橡胶带。", description: "以棉帆布为骨架层的传统平型传动带，可在各类加工设备中稳定传递动力。", features: ["切边与包边结构", "多种盎司等级", "支持灵活定制尺寸"], applications: ["工厂与码头", "粮食加工", "灌溉与木工设备"], specifications: [{ label: "参考等级", value: "28 / 30 / 32 / 34 / 36 OZ" }, { label: "增强层", value: "棉帆布" }, { label: "边缘选择", value: "切边 / 包边" }] },
   "industrial-v-belt": { name: "工业 V 带", eyebrow: "紧凑型驱动系统", summary: "根据带轮、电机和机械设备驱动结构选配的工业 V 带。", description: "OVBEL 为工业设备提供多种 V 带方案，可根据驱动结构和工作环境匹配带型、长度与增强结构。", features: ["按应用匹配带型", "提供驱动系统选型支持", "支持定制供货方案"], applications: ["工业机械", "输送机驱动", "加工设备"], specifications: [{ label: "带型", value: "根据应用选择" }, { label: "长度", value: "支持定制供货" }, { label: "结构", value: "包布或切边结构" }] },
-  "impact-bed": { name: "缓冲床与缓冲条", eyebrow: "落料区防护", summary: "用于输送机落料点和转运点的低摩擦冲击支撑装置。", description: "缓冲条由橡胶、钢或铝框架及超高分子量聚乙烯组成，可吸收落料冲击、稳定皮带并减少撒料。", features: ["低摩擦滑动表面", "无运动部件，无需润滑", "减少皮带磨损与维护"], applications: ["转运点", "破碎机出料口", "重型散料落料区"], specifications: [{ label: "表层", value: "UHMWPE" }, { label: "缓冲层", value: "吸能橡胶" }, { label: "框架", value: "钢或铝" }] },
+  "impact-bed": {
+    name: "缓冲床与缓冲条",
+    eyebrow: "落料区冲击防护",
+    summary: "为高冲击输送机落料点和转运点提供全宽、稳定的皮带支撑。",
+    description: "以稳定的低摩擦支撑面替代落料区缓冲托辊。模块化缓冲条由超高分子量聚乙烯、高弹橡胶和增强金属型材组成，可吸收冲击、控制皮带下垂，并帮助裙板保持连续密封。",
+    applicationIntro: "缓冲床在落料区连续支撑皮带，重点解决物料冲击、皮带下垂和裙板漏料。床体宽度、缓冲条配置和橡胶等级需结合带宽、落差、最大块度及运行工况确定。",
+    featureHeading: "从冲击进入系统的位置开始控制能量。",
+    features: ["连续支撑，减少皮带在托辊间的下垂", "低摩擦 UHMWPE 表层保证皮带平稳运行", "高弹橡胶吸收冲击能量并降低带体损伤", "模块化缓冲条可单独检查和更换", "落料区内无旋转部件和润滑点", "可调支撑架便于与裙板密封线对齐"],
+    applications: ["初级破碎机出料口", "矿山与采石场转运点", "高落差落料区", "重型或尖锐散料", "裙板密封区", "港口与散料码头"],
+    specifications: [{ label: "滑动层", value: "低摩擦 UHMWPE" }, { label: "缓冲层", value: "高弹吸能橡胶" }, { label: "增强层", value: "铝或钢型材" }, { label: "缓冲条结构", value: "三层整体硫化结构" }, { label: "床体形式", value: "固定式或可调式支撑架" }, { label: "尺寸", value: "根据带宽与冲击工况配置" }],
+    layers: [{ name: "滑动表层", material: "UHMWPE", purpose: "降低皮带接触面的运行摩擦与热量。" }, { name: "吸能缓冲层", material: "高弹橡胶", purpose: "受冲击时弹性变形，保护输送带带芯。" }, { name: "结构导轨", material: "铝 / 钢", purpose: "将缓冲条可靠固定到支撑架上。" }],
+    precautions: ["调试前确认中部与翼部缓冲条高度", "保持连续、清洁的接触线，避免对皮带过度压紧", "初期运行后检查紧固件和缓冲条磨损", "在金属增强层暴露前更换损坏的缓冲条"],
+    inquiryChecklist: ["带宽与带速", "物料及最大块度", "落差", "落料区长度", "现有托辊布置", "现场照片或图纸"],
+    seo: { title: "输送机落料区缓冲床与缓冲条", description: "为输送机落料区、转运点和重型散料工况配置的缓冲床及 UHMWPE 三层橡胶缓冲条。" },
+    sourceUrl: "https://www.respowerbelt.com/h-col-128.html",
+  },
   "elevator-buckets": { name: "提升机料斗", eyebrow: "垂直物料输送", summary: "适用于粮食、食品、农业和工业提升系统的多系列料斗。", description: "超过 12 个料斗系列、近 400 个尺寸参考，可适配不同物料、输送能力和安装孔位。", features: ["HDPE、尼龙和 PU 材料", "支持定制安装孔", "按应用提供间距建议"], applications: ["粮食提升机", "食品加工", "工业散料输送"], specifications: [{ label: "系列", value: "12+ 个参考系列" }, { label: "尺寸", value: "近 400 个参考规格" }, { label: "材料", value: "HDPE / 尼龙 / PU" }] },
   "industrial-rubber-sheet": { name: "工业橡胶板", eyebrow: "密封与防护", summary: "可按标准规格或客户尺寸供应的通用工业橡胶板。", description: "适用于技术、防护和加工用途的黑色工业橡胶板，可按项目尺寸裁切或整卷供应。", features: ["标准板材供应", "按尺寸裁切", "宽厚度范围"], applications: ["垫片与衬垫", "车间铺垫", "通用工业加工"], specifications: [{ label: "颜色", value: "黑色" }, { label: "参考厚度", value: "1–100 mm" }, { label: "尺寸", value: "标准或定制" }] },
   "hydraulic-hose": { name: "液压胶管", eyebrow: "流体动力", summary: "根据压力、温度、介质和接头要求配置的液压胶管。", description: "OVBEL 为移动和固定式机械提供工业液压胶管选型支持，最终结构依据询盘中的工作条件确定。", features: ["按压力等级选型", "胶管与接头配套", "提供应用审核支持"], applications: ["矿山机械", "工业液压系统", "移动设备"], specifications: [{ label: "直径", value: "根据系统流量选择" }, { label: "压力等级", value: "根据工作压力选择" }, { label: "连接形式", value: "胶管或带接头总成" }] },

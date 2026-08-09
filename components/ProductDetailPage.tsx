@@ -13,6 +13,11 @@ const pageCopy = {
     features: "Features",
     specifications: "Specifications",
     patterns: "Profile options",
+    construction: "Construction",
+    documents: "Technical documents",
+    documentTitle: "Dimensions and selection references.",
+    documentIntro: "Open each source document to review the available drawing, size table and specification notes.",
+    documentLabels: ["Impact bar drawing", "Reference size table", "Specification notes"],
     handling: "Handling & storage",
     applications: "Applications",
     applicationTitle: "Where this product works.",
@@ -40,6 +45,11 @@ const pageCopy = {
     features: "产品特点",
     specifications: "技术参数",
     patterns: "花纹选择",
+    construction: "结构解析",
+    documents: "技术资料",
+    documentTitle: "尺寸与选型参考。",
+    documentIntro: "点击查看原产品资料中的结构图、参考尺寸表与规格说明。",
+    documentLabels: ["缓冲条结构图", "参考尺寸表", "规格说明"],
     handling: "运输与储存",
     applications: "应用场景",
     applicationTitle: "适用领域与工况。",
@@ -67,6 +77,7 @@ export function ProductDetailPage({ product, category, locale }: { product: Prod
   const t = pageCopy[locale];
   const href = (path: string) => `/${locale}${path}`;
   const relatedProducts = getLocalizedProductsByCategory(category.slug, locale).filter((item) => item.slug !== product.slug).slice(0, 3);
+  const isImpactBed = product.slug === "impact-bed";
   const heroSpecifications = product.slug === "chevron-conveyor-belt" ? product.specifications.slice(1, 4) : product.specifications.slice(0, 3);
   const productUrl = `https://ovbel.com/${locale}/products/${category.slug}/${product.slug}`;
   const structuredData = {
@@ -85,7 +96,7 @@ export function ProductDetailPage({ product, category, locale }: { product: Prod
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
 
-      <section className="product-hero product-hero-premium">
+      <section className={`product-hero product-hero-premium${isImpactBed ? " impact-product-page" : ""}`}>
         <div className="shell">
           <div className="breadcrumbs">
             <Link href={href("/products")}>{t.productCenter}</Link><span>/</span>
@@ -123,6 +134,8 @@ export function ProductDetailPage({ product, category, locale }: { product: Prod
           <a href="#overview">{t.overview}</a>
           <a href="#features">{t.features}</a>
           <a href="#specifications">{t.specifications}</a>
+          {product.layers?.length ? <a href="#construction">{t.construction}</a> : null}
+          {product.media?.technicalImages?.length ? <a href="#documents">{t.documents}</a> : null}
           {product.patterns?.length ? <a href="#patterns">{t.patterns}</a> : null}
           {product.precautions?.length ? <a href="#handling">{t.handling}</a> : null}
         </div>
@@ -138,6 +151,54 @@ export function ProductDetailPage({ product, category, locale }: { product: Prod
           {product.applications.map((application, index) => <span key={application}><b>{String(index + 1).padStart(2, "0")}</b>{application}</span>)}
         </div>
       </section>
+
+      {product.layers?.length ? (
+        <section className="section impact-construction" id="construction">
+          <div className="shell impact-construction-grid">
+            <div className="impact-construction-copy">
+              <p className="eyebrow">{t.construction}</p>
+              <h2>{locale === "zh" ? "三层协同。一次消减冲击。" : "Three layers. One controlled impact."}</h2>
+              <p>{locale === "zh" ? "每一层承担不同任务：让皮带顺畅通过、吸收落料能量，并将载荷可靠传递到支撑架。" : "Each layer has one job: keep the belt moving, absorb the falling load and transfer the remaining force safely into the support frame."}</p>
+              {product.media?.constructionImage ? (
+                <ZoomableImage
+                  src={product.media.constructionImage}
+                  alt={locale === "zh" ? `${product.name}三层缓冲条` : `${product.name} three-layer impact bar`}
+                  sizes="(max-width: 720px) 100vw, 40vw"
+                  closeLabel={locale === "zh" ? "关闭大图" : "Close enlarged image"}
+                />
+              ) : null}
+            </div>
+            <div className="impact-layer-stack">
+              {product.layers.map((layer, index) => <article key={layer.name}>
+                <span>0{index + 1}</span><div><small>{layer.material}</small><h3>{layer.name}</h3><p>{layer.purpose}</p></div>
+              </article>)}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {product.media?.technicalImages?.length ? (
+        <section className="section shell product-documents" id="documents">
+          <div className="section-heading split-heading">
+            <div><p className="eyebrow">{t.documents}</p><h2>{t.documentTitle}</h2></div>
+            <p>{t.documentIntro}</p>
+          </div>
+          <div className="product-document-grid">
+            {product.media.technicalImages.map((image, index) => (
+              <article key={image}>
+                <ZoomableImage
+                  src={image}
+                  alt={`${product.name} — ${t.documentLabels[index] ?? `${t.documents} ${index + 1}`}`}
+                  sizes="(max-width: 720px) 100vw, 33vw"
+                  closeLabel={locale === "zh" ? "关闭大图" : "Close enlarged image"}
+                />
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{t.documentLabels[index] ?? `${t.documents} ${index + 1}`}</h3>
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section className="section section-gray" id="features">
         <div className="shell product-detail-grid">
