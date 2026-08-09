@@ -14,7 +14,7 @@ Planned domain: [ovbel.com](https://ovbel.com)
 
 - Six product categories
 - Two initial products per category
-- Twelve product detail pages
+- Thirteen product detail pages
 - English-first content with multilingual CMS support
 - Next.js and TypeScript frontend
 - Sanity content management
