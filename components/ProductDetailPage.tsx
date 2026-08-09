@@ -1,9 +1,9 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowIcon } from "@/components/ArrowIcon";
 import { ProductCard } from "@/components/ProductCard";
 import { ProductGallery } from "@/components/ProductGallery";
 import { ProductVisual } from "@/components/ProductVisual";
+import { ZoomableImage } from "@/components/ZoomableImage";
 import { getLocalizedProductsByCategory, type Category, type Locale, type Product } from "@/lib/products";
 
 const pageCopy = {
@@ -164,7 +164,12 @@ export function ProductDetailPage({ product, category, locale }: { product: Prod
             {product.patterns.map((pattern, index) => (
               <article key={pattern.name}>
                 {product.media?.patternImages?.[index] ? (
-                  <div className="pattern-image"><Image src={product.media.patternImages[index]} alt={`${product.name} — ${pattern.name}`} fill sizes="(max-width: 720px) 100vw, 33vw" /></div>
+                  <ZoomableImage
+                    src={product.media.patternImages[index]}
+                    alt={`${product.name} — ${pattern.name}`}
+                    sizes="(max-width: 720px) 100vw, 33vw"
+                    closeLabel={locale === "zh" ? "关闭大图" : "Close enlarged image"}
+                  />
                 ) : (
                   <div className={`pattern-swatch pattern-swatch-${(index % 6) + 1}`} aria-hidden="true"><i /><i /><i /></div>
                 )}

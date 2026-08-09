@@ -194,6 +194,7 @@ p { margin-top: 0; }
 .product-lightbox-previous { left: 28px; }.product-lightbox-next { right: 28px; }
 .product-lightbox-footer { min-width: 220px; position: absolute; left: 50%; bottom: 22px; display: flex; justify-content: space-between; gap: 30px; transform: translateX(-50%); font-size: .76rem; }
 .product-lightbox-footer p { margin: 0; color: #d6e3f1; }.product-lightbox-footer span { color: var(--orange); font-weight: 900; }
+.product-lightbox-footer-single { justify-content: center; text-align: center; }
 .product-media-caption { width: 72%; min-height: 76px; padding: 16px 20px; position: absolute; z-index: 5; right: -22px; bottom: -22px; display: flex; align-items: center; gap: 17px; color: white; background: var(--navy-deep); border-bottom: 4px solid var(--orange); }
 .product-media-caption span { color: var(--orange); font-size: 1.3rem; font-weight: 950; }
 .product-media-caption p { margin: 0; font-size: .76rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
@@ -238,8 +239,13 @@ p { margin-top: 0; }
 .pattern-grid article > span { margin-top: 22px; color: var(--orange); font-size: .72rem; font-weight: 900; }
 .pattern-grid h3 { margin: 24px 0 10px; }
 .pattern-grid p { margin: 0; color: var(--muted); font-size: .84rem; }
-.pattern-image { min-height: 165px; position: relative; overflow: hidden; background: #eef1f3; }
+.pattern-image { width: 100%; min-height: 165px; padding: 0; position: relative; overflow: hidden; border: 0; background: #eef1f3; }
 .pattern-image img { object-fit: contain; }
+.zoomable-image { cursor: zoom-in; }
+.zoomable-image img { transition: transform .3s ease; }
+.zoomable-image:hover img { transform: scale(1.035); }
+.zoomable-image > b { width: 36px; height: 36px; position: absolute; z-index: 2; right: 12px; top: 12px; display: grid; place-items: center; color: white; background: rgba(6,31,61,.82); border-radius: 50%; font-size: 1.1rem; font-weight: 500; }
+.zoomable-image:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
 .pattern-swatch { min-height: 165px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: space-around; gap: 8px; background: #151a1f; }
 .pattern-swatch::before { content: ""; position: absolute; inset: 0; opacity: .3; background-image: linear-gradient(rgba(255,255,255,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.09) 1px, transparent 1px); background-size: 22px 22px; }
 .pattern-swatch i { width: 20%; height: 86px; position: relative; display: block; border-radius: 3px; border-left: 7px solid #596168; border-right: 7px solid #596168; transform: skewY(-28deg); }
