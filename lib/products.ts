@@ -10,6 +10,11 @@ export type ProductSeo = {
   description: string;
 };
 
+export type ProductMedia = {
+  gallery: string[];
+  patternImages?: string[];
+};
+
 export type Product = {
   slug: string;
   name: string;
@@ -27,6 +32,7 @@ export type Product = {
   inquiryChecklist?: string[];
   seo?: ProductSeo;
   sourceUrl?: string;
+  media?: ProductMedia;
 };
 
 export type Category = {
@@ -134,6 +140,22 @@ export const products: Product[] = [
       description: "Chevron conveyor belts with CC, CP, NN or EP carcass options, 300–800 mm reference widths and customizable profiles for inclined bulk-material handling.",
     },
     sourceUrl: "https://www.respowerbelt.com/h-col-114.html",
+    media: {
+      gallery: [
+        "/products/chevron-conveyor-belt/production-line.webp",
+        "/products/chevron-conveyor-belt/factory-roll.webp",
+        "/products/chevron-conveyor-belt/profile-detail.webp",
+        "/products/chevron-conveyor-belt/finished-rolls.webp",
+      ],
+      patternImages: [
+        "/products/chevron-conveyor-belt/pattern-01.webp",
+        "/products/chevron-conveyor-belt/pattern-02.webp",
+        "/products/chevron-conveyor-belt/pattern-03.webp",
+        "/products/chevron-conveyor-belt/pattern-04.webp",
+        "/products/chevron-conveyor-belt/pattern-05.webp",
+        "/products/chevron-conveyor-belt/pattern-06.webp",
+      ],
+    },
   },
   {
     slug: "rough-top-conveyor-belt",

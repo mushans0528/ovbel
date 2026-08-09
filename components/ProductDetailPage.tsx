@@ -1,6 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowIcon } from "@/components/ArrowIcon";
 import { ProductCard } from "@/components/ProductCard";
+import { ProductGallery } from "@/components/ProductGallery";
 import { ProductVisual } from "@/components/ProductVisual";
 import { getLocalizedProductsByCategory, type Category, type Locale, type Product } from "@/lib/products";
 
@@ -76,6 +78,7 @@ export function ProductDetailPage({ product, category, locale }: { product: Prod
     brand: { "@type": "Brand", name: "OVBEL" },
     manufacturer: { "@type": "Organization", name: "Shandong Respower Industrial Co., Ltd." },
     url: productUrl,
+    ...(product.media?.gallery.length ? { image: product.media.gallery.map((image) => `https://ovbel.com${image}`) } : {}),
   };
 
   return (
@@ -91,7 +94,11 @@ export function ProductDetailPage({ product, category, locale }: { product: Prod
           </div>
           <div className="product-hero-grid">
             <div className="product-media-stage">
-              <ProductVisual category={category} label={product.eyebrow} productSlug={product.slug} />
+              {product.media?.gallery.length ? (
+                <ProductGallery images={product.media.gallery} productName={product.name} locale={locale} />
+              ) : (
+                <ProductVisual category={category} label={product.eyebrow} productSlug={product.slug} />
+              )}
               <div className="product-media-caption"><span>{category.index}</span><p>{category.name}</p></div>
             </div>
             <div className="product-summary">
@@ -156,7 +163,11 @@ export function ProductDetailPage({ product, category, locale }: { product: Prod
           <div className="pattern-grid">
             {product.patterns.map((pattern, index) => (
               <article key={pattern.name}>
-                <div className={`pattern-swatch pattern-swatch-${(index % 6) + 1}`} aria-hidden="true"><i /><i /><i /></div>
+                {product.media?.patternImages?.[index] ? (
+                  <div className="pattern-image"><Image src={product.media.patternImages[index]} alt={`${product.name} — ${pattern.name}`} fill sizes="(max-width: 720px) 100vw, 33vw" /></div>
+                ) : (
+                  <div className={`pattern-swatch pattern-swatch-${(index % 6) + 1}`} aria-hidden="true"><i /><i /><i /></div>
+                )}
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <h3>{pattern.name}</h3>
                 <p>{pattern.description}</p>

@@ -11,7 +11,11 @@
 
 不得把搜索到的其他供应商产品图作为 OVBEL 产品图，也不得在没有审核的情况下用 AI 生成图替代真实产品照片。
 
-## 2. 最低素材清单
+## 2. 已导入素材
+
+2026-08-09 已从原产品页提取并导入 4 张生产/成品图和 6 张花纹工程图，统一存放于 `public/products/chevron-conveyor-belt/`。发布前仍需由素材负责人确认图片与产品匹配及使用权。
+
+## 3. 最低素材清单
 
 | ID | 文件建议名 | 内容 | 最低建议尺寸 | 必需 |
 |---|---|---|---|---|
@@ -27,7 +31,7 @@
 
 如果只能取得一张真实产品图，首版可以只发布 IMG-01，并用文本卡片列出花纹类型。
 
-## 3. 图片处理
+## 4. 图片处理
 
 - 保存原始文件，不覆盖母版。
 - 发布格式优先 AVIF/WebP，保留 JPEG/PNG 原图用于归档。
@@ -46,7 +50,7 @@
 | `productMatch` | 是否确认属于本产品 |
 | `notes` | 型号、花纹或拍摄场景说明 |
 
-## 4. Alt 文本
+## 5. Alt 文本
 
 Alt 文本描述图片中真实可见的内容，不堆砌关键词。
 
@@ -60,7 +64,7 @@ Alt 文本描述图片中真实可见的内容，不堆砌关键词。
 
 如果图片仅为装饰，应使用空 alt；产品主图不能使用空 alt。
 
-## 5. SEO 文案
+## 6. SEO 文案
 
 ### English
 
@@ -74,7 +78,7 @@ Alt 文本描述图片中真实可见的内容，不堆砌关键词。
 - Meta description: `提供 CC、CP、NN、EP 带芯选择、300–800 mm 参考带宽和可定制花纹结构的倾斜物料输送带。`
 - Canonical: `https://ovbel.com/zh/products/conveyor-belts/chevron-conveyor-belt`
 
-## 6. Hreflang
+## 7. Hreflang
 
 ```text
 en      https://ovbel.com/en/products/conveyor-belts/chevron-conveyor-belt
@@ -82,14 +86,13 @@ zh-CN   https://ovbel.com/zh/products/conveyor-belts/chevron-conveyor-belt
 x-default https://ovbel.com/en/products/conveyor-belts/chevron-conveyor-belt
 ```
 
-## 7. Open Graph
+## 8. Open Graph
 
 - 使用经审核的主图，推荐 1200×630 的分享裁切版本。
 - OG 标题和描述按页面语言输出。
 - `og:url` 必须是当前语言 canonical。
 - 不要让中文页沿用英文全站默认 OG 标题。
 
-## 8. 关键词使用原则
+## 9. 关键词使用原则
 
 英文可自然覆盖 `chevron conveyor belt`、`patterned conveyor belt`、`inclined conveyor belt`；中文可自然覆盖“花纹输送带”“倾斜输送带”“人字花纹输送带”。不建议设置过时的 `meta keywords`，也不要在页面底部堆叠关键词。
-
