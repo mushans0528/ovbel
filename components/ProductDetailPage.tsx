@@ -89,7 +89,7 @@ export function ProductDetailPage({ product, category, locale }: { product: Prod
     brand: { "@type": "Brand", name: "OVBEL" },
     manufacturer: { "@type": "Organization", name: "Shandong Respower Industrial Co., Ltd." },
     url: productUrl,
-    ...(product.media?.gallery.length ? { image: product.media.gallery.map((image) => `https://ovbel.com${image}`) } : {}),
+    ...(product.media?.gallery.length ? { image: [product.media.cover, ...product.media.gallery].filter((image): image is string => Boolean(image)).map((image) => `https://ovbel.com${image}`) } : {}),
   };
 
   return (

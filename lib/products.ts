@@ -12,6 +12,7 @@ export type ProductSeo = {
 
 export type ProductMedia = {
   gallery: string[];
+  cover?: string;
   patternImages?: string[];
   constructionImage?: string;
   technicalImages?: string[];
@@ -198,6 +199,7 @@ export const products: Product[] = [
     },
     sourceUrl: "https://www.respowerbelt.com/h-col-120.html",
     media: {
+      cover: "/products/elevator-conveyor-belt/cover.jpg",
       gallery: [
         "/products/elevator-conveyor-belt/elevator-head-pulley-buckets.webp",
         "/products/elevator-conveyor-belt/buckets-mounted-on-belt.webp",

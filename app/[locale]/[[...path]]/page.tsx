@@ -49,7 +49,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const description = product?.seo?.description || product?.summary || category?.summary || copy[locale].meta;
   const canonical = `https://ovbel.com/${locale}${path.length ? `/${path.join("/")}` : ""}`;
   const alternatePath = path.length ? `/${path.join("/")}` : "";
-  return { title, description, alternates: { canonical, languages: { "en": `https://ovbel.com/en${alternatePath}`, "zh-CN": `https://ovbel.com/zh${alternatePath}`, "x-default": `https://ovbel.com/en${alternatePath}` } }, openGraph: { title, description, url: canonical, ...(product?.media?.gallery.length ? { images: product.media.gallery.map((image) => `https://ovbel.com${image}`) } : {}) } };
+  const ogImages = product?.media ? [product.media.cover, ...product.media.gallery].filter((image): image is string => Boolean(image)).map((image) => `https://ovbel.com${image}`) : [];
+  return { title, description, alternates: { canonical, languages: { "en": `https://ovbel.com/en${alternatePath}`, "zh-CN": `https://ovbel.com/zh${alternatePath}`, "x-default": `https://ovbel.com/en${alternatePath}` } }, openGraph: { title, description, url: canonical, ...(ogImages.length ? { images: ogImages } : {}) } };
 }
 
 function Home({ locale }: { locale: Locale }) {
