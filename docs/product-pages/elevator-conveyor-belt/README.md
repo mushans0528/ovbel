@@ -15,7 +15,7 @@
 | --- | --- | --- |
 | https://www.respowerbelt.com/h-col-120.html | 公司现有英文站产品页（正文、特点、打孔范围、提升机结构说明、4 张产品图片） | 2026-08-09 |
 
-原站为 OVBEL 运营主体（Shandong Respower Industrial Co., Ltd.）自有网站，文案与图片素材按自有资料使用。
+原站为 OVBEL 运营主体（Shandong Ovbel Industrial Co., Ltd.）自有网站，文案与图片素材按自有资料使用。
 
 ## 数据字段映射
 

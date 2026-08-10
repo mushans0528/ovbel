@@ -89,7 +89,7 @@ https://ovbel.com/zh/products/conveyor-belts/rough-top-conveyor-belt
   "description": "<对应语言 summary>",
   "category": "<对应语言分类名>",
   "brand": { "@type": "Brand", "name": "OVBEL" },
-  "manufacturer": { "@type": "Organization", "name": "Shandong Respower Industrial Co., Ltd." },
+  "manufacturer": { "@type": "Organization", "name": "Shandong Ovbel Industrial Co., Ltd." },
   "url": "<canonical>",
   "image": ["<cover 绝对 URL>", "<图库 1 绝对 URL>", "<图库 2 绝对 URL>", "<图库 3 绝对 URL>"]
 }

@@ -25,14 +25,14 @@ OVBEL 定位为面向海外市场的 B2B 工业机械配件网站，核心业务
 
 - 网站品牌：OVBEL
 - 网站域名：ovbel.com
-- 公司主体：Shandong Respower Industrial Co., Ltd
+- 公司主体：Shandong Ovbel Industrial Co., Ltd
 - 公司所在地：Linyi, Shandong Province, China
 
 页面使用方式：
 
 - 页眉、产品和营销内容统一使用 OVBEL。
 - About Us 和页脚法律信息显示公司主体全称。
-- 可使用 `OVBEL is operated by Shandong Respower Industrial Co., Ltd.` 说明品牌与公司的关系。
+- 可使用 `OVBEL is operated by Shandong Ovbel Industrial Co., Ltd.` 说明品牌与公司的关系。
 
 ### 1.3 公司介绍基础事实
 
@@ -482,7 +482,7 @@ Product 至少包含：
 迁移时必须：
 
 - 将 RESPOWER 营销品牌替换为 OVBEL。
-- 在法律公司信息中保留 Shandong Respower Industrial Co., Ltd。
+- 在法律公司信息中使用 Shandong Ovbel Industrial Co., Ltd。
 - 修复拼写、语法、重复正文和损坏表格。
 - 不直接引用原站图片 URL，应取得原始文件后上传新 CMS。
 - 不复制参考视觉站的图片、Logo、文案或代码。
