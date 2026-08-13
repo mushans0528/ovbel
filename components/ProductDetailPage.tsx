@@ -12,7 +12,7 @@ const pageCopy = {
     overview: "Overview",
     features: "Features",
     specifications: "Specifications",
-    patterns: "Profile options",
+    patterns: "Profiles & models",
     construction: "Construction",
     documents: "Technical documents",
     documentTitle: "Dimensions and selection references.",
@@ -25,8 +25,8 @@ const pageCopy = {
     featureFallback: "Built around the application.",
     technical: "Technical overview",
     specificationNote: "Reference values are reviewed against the conveyed material and operating conditions before quotation.",
-    patternTitle: "Choose the surface around the material flow.",
-    patternIntro: "Profile availability and dimensions are confirmed against the belt construction and application.",
+    patternTitle: "Review the available product options.",
+    patternIntro: "Profile or model availability and dimensions are confirmed against the product construction and application.",
     handlingTitle: "Protect the belt before installation.",
     handlingIntro: "General guidance from the source product information. Compound-specific instructions take precedence when supplied.",
     inquiryLabel: "Application review",
@@ -44,7 +44,7 @@ const pageCopy = {
     overview: "产品概览",
     features: "产品特点",
     specifications: "技术参数",
-    patterns: "花纹选择",
+    patterns: "花纹与型号",
     construction: "结构解析",
     documents: "技术资料",
     documentTitle: "尺寸与选型参考。",
@@ -57,8 +57,8 @@ const pageCopy = {
     featureFallback: "围绕实际应用设计。",
     technical: "技术概览",
     specificationNote: "参考数值将在报价前结合输送物料和工作条件审核确认。",
-    patternTitle: "根据物料流动选择表面结构。",
-    patternIntro: "具体可选花纹及尺寸需结合带体结构和应用要求确认。",
+    patternTitle: "查看可选产品方案。",
+    patternIntro: "具体花纹或型号及尺寸需结合产品结构和应用要求确认。",
     handlingTitle: "安装前妥善保护输送带。",
     handlingIntro: "以下为原产品资料中的通用说明；如已提供具体胶料说明，应以该说明为准。",
     inquiryLabel: "应用审核",
@@ -89,7 +89,7 @@ export function ProductDetailPage({ product, category, locale }: { product: Prod
     brand: { "@type": "Brand", name: "OVBEL" },
     manufacturer: { "@type": "Organization", name: "Shandong Ovbel Industrial Co., Ltd." },
     url: productUrl,
-    ...(product.media?.gallery.length ? { image: [product.media.cover, ...product.media.gallery].filter((image): image is string => Boolean(image)).map((image) => `https://ovbel.com${image}`) } : {}),
+    ...(product.media?.gallery.length ? { image: [...new Set([product.media.cover, ...product.media.gallery].filter((image): image is string => Boolean(image)))].map((image) => `https://ovbel.com${image}`) } : {}),
   };
 
   return (
@@ -106,7 +106,7 @@ export function ProductDetailPage({ product, category, locale }: { product: Prod
           <div className="product-hero-grid">
             <div className="product-media-stage">
               {product.media?.gallery.length ? (
-                <ProductGallery images={product.media.gallery} productName={product.name} locale={locale} />
+                <ProductGallery images={product.media.gallery} imageAlt={product.media.galleryAlt} productName={product.name} locale={locale} />
               ) : (
                 <ProductVisual category={category} label={product.eyebrow} productSlug={product.slug} />
               )}
@@ -188,12 +188,12 @@ export function ProductDetailPage({ product, category, locale }: { product: Prod
               <article key={image}>
                 <ZoomableImage
                   src={image}
-                  alt={`${product.name} — ${t.documentLabels[index] ?? `${t.documents} ${index + 1}`}`}
+                  alt={`${product.name} — ${product.media?.technicalImageLabels?.[index] ?? t.documentLabels[index] ?? `${t.documents} ${index + 1}`}`}
                   sizes="(max-width: 720px) 100vw, 33vw"
                   closeLabel={locale === "zh" ? "关闭大图" : "Close enlarged image"}
                 />
                 <span>{String(index + 1).padStart(2, "0")}</span>
-                <h3>{t.documentLabels[index] ?? `${t.documents} ${index + 1}`}</h3>
+                <h3>{product.media?.technicalImageLabels?.[index] ?? t.documentLabels[index] ?? `${t.documents} ${index + 1}`}</h3>
               </article>
             ))}
           </div>

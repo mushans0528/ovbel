@@ -12,10 +12,12 @@ export type ProductSeo = {
 
 export type ProductMedia = {
   gallery: string[];
+  galleryAlt?: string[];
   cover?: string;
   patternImages?: string[];
   constructionImage?: string;
   technicalImages?: string[];
+  technicalImageLabels?: string[];
 };
 
 export type ProductLayer = {
@@ -1302,6 +1304,95 @@ export const products: Product[] = [
     },
   },
   {
+    slug: "belt-fastener",
+    name: "Conveyor Belt Fastener",
+    category: "conveyor-components",
+    eyebrow: "Mechanical belt joining",
+    summary: "Galvanized mechanical fasteners for joining conveyor-belt ends or reconnecting a damaged belt section with matched installation tools.",
+    description: "This belt-fastener range creates a mechanical joint between two conveyor-belt ends. The source page describes galvanized metal construction, installation with matching wrench tools, several models for different belt sizes and types, and customization for application-specific requirements. The exact base alloy, model-to-belt mapping and joint rating must be confirmed before selection.",
+    applicationIntro: "Mechanical fasteners are considered when a conveyor belt needs an on-site joint or repair without a hot or cold vulcanizing process. The correct fastener depends on belt construction, total thickness, width, tension, pulley diameter and service conditions. A joint should only be selected after those inputs are reviewed.",
+    featureHeading: "A serviceable mechanical joint matched to the belt.",
+    features: [
+      "Mechanical joining method for connecting two belt ends or repairing a broken section",
+      "Galvanized finish intended to improve corrosion resistance during handling and service",
+      "Matched wrench tools support straightforward on-site installation",
+      "Multiple models are shown for different belt sizes and constructions",
+      "Installation does not require hot or cold vulcanizing equipment",
+      "Application-specific customization is stated as available on the source page",
+    ],
+    applications: [
+      "Conveyor-belt installation and joining",
+      "On-site repair of a damaged belt section",
+      "Mining and quarry conveyor maintenance",
+      "Aggregate and bulk-material handling",
+      "Plant maintenance and planned belt replacement",
+    ],
+    specifications: [
+      { label: "Joint type", value: "Mechanical conveyor-belt fastener" },
+      { label: "Primary function", value: "Join two belt ends or reconnect a damaged belt section" },
+      { label: "Material / finish", value: "Galvanized metal; base alloy requires confirmation" },
+      { label: "Installation tools", value: "Matched wrench tools" },
+      { label: "Installation process", value: "Mechanical fastening; no hot or cold vulcanizing process" },
+      { label: "Reference models", value: "1\" / 140E / 190E / 1.5\" / 2\" / 2.5\" / 3.0\"" },
+      { label: "Reference belt thickness", value: "5–11 / 5–11 / 8–14 / 11–17 / 14–21 / 19–25 / ≥24 mm by model" },
+      { label: "Reference strength", value: "30 / 40 / 65 / 50 / 75 / 75 / 100 kN/m by model" },
+      { label: "Reference minimum pulley diameter", value: "300 / 360 / 460 / 460 / 760 / 1070 / 1200 mm by model" },
+      { label: "Special tool group", value: "A / A / A / B / B / C / C by model" },
+      { label: "Customization", value: "Available for application-specific requirements, subject to review" },
+    ],
+    patterns: [
+      { name: "1\"", description: "5–11 mm reference belt thickness, 30 kN/m, 300 mm minimum pulley, tool group A." },
+      { name: "140E", description: "5–11 mm reference belt thickness, 40 kN/m, 360 mm minimum pulley, tool group A." },
+      { name: "190E", description: "8–14 mm reference belt thickness, 65 kN/m, 460 mm minimum pulley, tool group A." },
+      { name: "1.5\"", description: "11–17 mm reference belt thickness, 50 kN/m, 460 mm minimum pulley, tool group B." },
+      { name: "2\"", description: "14–21 mm reference belt thickness, 75 kN/m, 760 mm minimum pulley, tool group B." },
+      { name: "2.5\"", description: "19–25 mm reference belt thickness, 75 kN/m, 1070 mm minimum pulley, tool group C." },
+      { name: "3.0\"", description: "≥24 mm reference belt thickness, 100 kN/m, 1200 mm minimum pulley, tool group C." },
+    ],
+    precautions: [
+      "Keep fasteners dry and in their original packaging before installation",
+      "Protect fastener edges, hinge components and joining hardware from impact or deformation",
+      "Confirm belt thickness, construction and minimum pulley diameter before choosing a model",
+      "Use the matched installation tool and follow the approved joint procedure",
+      "Inspect joint alignment and fastener retention after commissioning and during routine maintenance",
+    ],
+    inquiryChecklist: [
+      "Belt construction and total thickness",
+      "Belt width and required joint length",
+      "Belt rating or operating tension",
+      "Minimum pulley diameter",
+      "Conveyed material and operating environment",
+      "Preferred fastener model, if known",
+      "Quantity, installation tools and destination",
+    ],
+    seo: {
+      title: "Conveyor Belt Fastener for Mechanical Belt Joining",
+      description: "Galvanized mechanical conveyor-belt fasteners with matched wrench tools and multiple model options for joining belt ends and on-site belt repair.",
+    },
+    sourceUrl: "https://www.respowerbelt.com/h-col-131.html",
+    media: {
+      cover: "/products/belt-fastener/cover.webp",
+      gallery: [
+        "/products/belt-fastener/cover.webp",
+        "/products/belt-fastener/gallery-02.webp",
+        "/products/belt-fastener/gallery-03.webp",
+        "/products/belt-fastener/gallery-04.webp",
+      ],
+      galleryAlt: [
+        "Galvanized conveyor belt fastener plates, bolts and nuts",
+        "Assembled dark-finish conveyor belt fastener viewed from both sides",
+        "Dark-finish conveyor belt fastener plates with bolts and nuts",
+        "Close-up of two conveyor belt fastener plates and joining hardware",
+      ],
+      technicalImages: [
+        "/products/belt-fastener/model-selection-table.png",
+      ],
+      technicalImageLabels: [
+        "Model selection and dimensional reference table",
+      ],
+    },
+  },
+  {
     slug: "industrial-rubber-sheet",
     name: "Industrial Rubber Sheet",
     category: "rubber-products-hoses",
@@ -1974,6 +2065,93 @@ const zhProducts: Record<string, Omit<Product, "slug" | "category">> = {
       description: "OVBEL 提升机料斗提供低碳钢、不锈钢、HDPE、尼龙 6、增强尼龙和 PU 六种材料，12 个以上系列、近 400 个尺寸参考，适用于粮食、食品及工业垂直输送。",
     },
     sourceUrl: "https://www.respowerbelt.com/h-col-129.html",
+  },
+  "belt-fastener": {
+    name: "输送带扣",
+    eyebrow: "输送带机械接头",
+    summary: "用于连接输送带两端或重新连接受损带段的镀锌机械带扣，配合专用扳手工具安装。",
+    description: "该输送带扣系列用于在两个输送带端部之间建立机械接头。原页面明确介绍了镀锌金属结构、配套扳手安装方式、适配不同带体尺寸和类型的多种型号，以及针对特殊工况的定制可能。基材牌号、型号与带体的对应关系及接头额定能力需在选型前确认。",
+    applicationIntro: "当输送带需要现场接头或修复，且不采用热硫化或冷粘接工艺时，可考虑使用机械带扣。正确选型取决于带体结构、总厚度、带宽、张力、滚筒直径和使用环境，应审核这些信息后再确定接头方案。",
+    featureHeading: "围绕带体匹配可维护的机械接头。",
+    features: [
+      "用于连接两个带端或修复断裂带段的机械接头方式",
+      "镀锌表面用于提高搬运、储存和使用过程中的耐腐蚀性",
+      "配套扳手工具便于现场机械安装",
+      "原页面展示多种型号，用于匹配不同带体尺寸和结构",
+      "安装时无需热硫化或冷粘接设备",
+      "原页面说明可针对特殊工况进行定制",
+    ],
+    applications: [
+      "输送带安装与接头",
+      "受损带段现场修复",
+      "矿山与采石输送机维护",
+      "砂石骨料与散料输送",
+      "工厂计划检修与输送带更换",
+    ],
+    specifications: [
+      { label: "接头类型", value: "输送带机械带扣" },
+      { label: "主要功能", value: "连接两个带端或重新连接受损带段" },
+      { label: "材质 / 表面", value: "镀锌金属；基材牌号待确认" },
+      { label: "安装工具", value: "配套扳手工具" },
+      { label: "安装工艺", value: "机械紧固；无需热硫化或冷粘接工艺" },
+      { label: "参考型号", value: "1\" / 140E / 190E / 1.5\" / 2\" / 2.5\" / 3.0\"" },
+      { label: "参考带体厚度", value: "按型号分别为 5–11 / 5–11 / 8–14 / 11–17 / 14–21 / 19–25 / ≥24 mm" },
+      { label: "参考强度", value: "按型号分别为 30 / 40 / 65 / 50 / 75 / 75 / 100 kN/m" },
+      { label: "参考最小滚筒直径", value: "按型号分别为 300 / 360 / 460 / 460 / 760 / 1070 / 1200 mm" },
+      { label: "专用工具组", value: "按型号分别为 A / A / A / B / B / C / C" },
+      { label: "定制", value: "可根据特殊工况进行审核定制" },
+    ],
+    patterns: [
+      { name: "1\"", description: "参考带体厚度 5–11 mm，强度 30 kN/m，最小滚筒直径 300 mm，A 组工具。" },
+      { name: "140E", description: "参考带体厚度 5–11 mm，强度 40 kN/m，最小滚筒直径 360 mm，A 组工具。" },
+      { name: "190E", description: "参考带体厚度 8–14 mm，强度 65 kN/m，最小滚筒直径 460 mm，A 组工具。" },
+      { name: "1.5\"", description: "参考带体厚度 11–17 mm，强度 50 kN/m，最小滚筒直径 460 mm，B 组工具。" },
+      { name: "2\"", description: "参考带体厚度 14–21 mm，强度 75 kN/m，最小滚筒直径 760 mm，B 组工具。" },
+      { name: "2.5\"", description: "参考带体厚度 19–25 mm，强度 75 kN/m，最小滚筒直径 1070 mm，C 组工具。" },
+      { name: "3.0\"", description: "参考带体厚度 ≥24 mm，强度 100 kN/m，最小滚筒直径 1200 mm，C 组工具。" },
+    ],
+    precautions: [
+      "安装前将带扣保存于干燥环境并保留原包装",
+      "避免带扣边缘、铰接部件和连接五金受到撞击或变形",
+      "选型前确认带体厚度、结构与最小滚筒直径",
+      "使用配套安装工具并执行经确认的接头工艺",
+      "试车后及定期维护时检查接头对中和带扣紧固状态",
+    ],
+    inquiryChecklist: [
+      "带体结构与总厚度",
+      "带宽与所需接头长度",
+      "输送带强度等级或运行张力",
+      "最小滚筒直径",
+      "输送物料与工作环境",
+      "已知的带扣型号（如有）",
+      "数量、安装工具与目的地",
+    ],
+    seo: {
+      title: "输送带机械接头用带扣",
+      description: "镀锌输送带机械带扣，配合专用扳手工具安装，提供适配不同带体尺寸和类型的多种型号，用于带端连接和现场修复。",
+    },
+    sourceUrl: "https://www.respowerbelt.com/h-col-131.html",
+    media: {
+      cover: "/products/belt-fastener/cover.webp",
+      gallery: [
+        "/products/belt-fastener/cover.webp",
+        "/products/belt-fastener/gallery-02.webp",
+        "/products/belt-fastener/gallery-03.webp",
+        "/products/belt-fastener/gallery-04.webp",
+      ],
+      galleryAlt: [
+        "镀锌输送带扣的扣板、螺栓与螺母",
+        "从两个角度展示的深色输送带扣组件",
+        "深色输送带扣扣板、螺栓与螺母",
+        "两片输送带扣扣板与连接五金特写",
+      ],
+      technicalImages: [
+        "/products/belt-fastener/model-selection-table.png",
+      ],
+      technicalImageLabels: [
+        "型号选择与尺寸参考表",
+      ],
+    },
   },
   "industrial-rubber-sheet": {
     name: "工业橡胶板",

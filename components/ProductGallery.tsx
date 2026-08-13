@@ -4,11 +4,11 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import type { Locale } from "@/lib/products";
 
-export function ProductGallery({ images, productName, locale }: { images: string[]; productName: string; locale: Locale }) {
+export function ProductGallery({ images, imageAlt, productName, locale }: { images: string[]; imageAlt?: string[]; productName: string; locale: Locale }) {
   const [activeImage, setActiveImage] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
-  const imageLabel = (index: number) => locale === "zh" ? `${productName}产品图片 ${index + 1}` : `${productName} product image ${index + 1}`;
+  const imageLabel = (index: number) => imageAlt?.[index] ?? (locale === "zh" ? `${productName}产品图片 ${index + 1}` : `${productName} product image ${index + 1}`);
   const previousLabel = locale === "zh" ? "查看上一张图片" : "View previous image";
   const nextLabel = locale === "zh" ? "查看下一张图片" : "View next image";
   const closeLabel = locale === "zh" ? "关闭大图" : "Close enlarged image";
@@ -39,7 +39,7 @@ export function ProductGallery({ images, productName, locale }: { images: string
   return (
     <div className="product-gallery">
       <button type="button" className="product-gallery-main" onClick={() => setIsLightboxOpen(true)} aria-label={enlargeLabel}>
-        <Image src={images[activeImage]} alt={imageLabel(activeImage)} fill priority sizes="(max-width: 720px) 100vw, 50vw" />
+        <Image src={images[activeImage]} alt={imageLabel(activeImage)} fill priority loading="eager" sizes="(max-width: 720px) 100vw, 50vw" />
         <span>{String(activeImage + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}</span>
       </button>
       <div className="product-gallery-thumbnails" aria-label={locale === "zh" ? "产品图库" : "Product gallery"}>
