@@ -82,14 +82,6 @@ export const categories: Category[] = [
     color: "steel",
   },
   {
-    slug: "rubber-products-hoses",
-    name: "Rubber Products & Hoses",
-    shortName: "Rubber & Hose",
-    index: "04",
-    summary: "Industrial rubber sheet, sealing and hose products configured for demanding service conditions.",
-    color: "slate",
-  },
-  {
     slug: "crusher-mining-parts",
     name: "Crusher & Mining Parts",
     shortName: "Mining Parts",
@@ -1452,21 +1444,6 @@ export const products: Product[] = [
     },
   },
   {
-    slug: "hydraulic-hose",
-    name: "Hydraulic Hose",
-    category: "rubber-products-hoses",
-    eyebrow: "Fluid power",
-    summary: "Hydraulic hose supply configured around pressure, temperature, medium and fitting requirements.",
-    description: "OVBEL supports industrial hydraulic hose sourcing for mobile and fixed machinery. Final construction is selected from the working conditions supplied with the inquiry.",
-    features: ["Pressure-based selection", "Hose and fitting coordination", "Application review support"],
-    applications: ["Mining machinery", "Industrial hydraulics", "Mobile equipment"],
-    specifications: [
-      { label: "Diameter", value: "Selected to system flow" },
-      { label: "Pressure class", value: "Selected to working pressure" },
-      { label: "Connections", value: "Hose-only or fitted assembly" },
-    ],
-  },
-  {
     slug: "rubber-seal-strip",
     name: "Rubber Seal Strip",
     category: "power-transmission-belts",
@@ -1579,7 +1556,6 @@ const zhCategories: Record<string, Pick<Category, "name" | "shortName" | "summar
   "conveyor-belts": { name: "输送带", shortName: "输送带", summary: "适用于倾斜输送、高磨损工况和通用物料输送的工程输送带。" },
   "power-transmission-belts": { name: "橡胶制品", shortName: "橡胶制品", summary: "为动力传递与严苛工业工况配置的橡胶输送带、橡胶板及密封条等制品。" },
   "conveyor-components": { name: "输送机配件", shortName: "输送配件", summary: "用于冲击防护、斗式提升和维持输送系统高效运行的配件与五金。" },
-  "rubber-products-hoses": { name: "橡胶制品与胶管", shortName: "橡胶与胶管", summary: "适用于严苛工况的工业橡胶板、密封件和胶管产品。" },
   "crusher-mining-parts": { name: "破碎机与矿山配件", shortName: "矿山配件", summary: "面向采石、骨料和矿物加工设备的耐磨件与筛分配件。" },
 };
 
@@ -2168,7 +2144,6 @@ const zhProducts: Record<string, Omit<Product, "slug" | "category">> = {
     },
     sourceUrl: "https://www.respowerbelt.com/h-col-155.html",
   },
-  "hydraulic-hose": { name: "液压胶管", eyebrow: "流体动力", summary: "根据压力、温度、介质和接头要求配置的液压胶管。", description: "OVBEL 为移动和固定式机械提供工业液压胶管选型支持，最终结构依据询盘中的工作条件确定。", features: ["按压力等级选型", "胶管与接头配套", "提供应用审核支持"], applications: ["矿山机械", "工业液压系统", "移动设备"], specifications: [{ label: "直径", value: "根据系统流量选择" }, { label: "压力等级", value: "根据工作压力选择" }, { label: "连接形式", value: "胶管或带接头总成" }] },
   "rubber-seal-strip": {
     name: "橡胶密封条",
     eyebrow: "密封与边缘防护",
