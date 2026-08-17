@@ -81,14 +81,6 @@ export const categories: Category[] = [
     summary: "Impact protection, elevator components and hardware that keep conveyor systems productive.",
     color: "steel",
   },
-  {
-    slug: "crusher-mining-parts",
-    name: "Crusher & Mining Parts",
-    shortName: "Mining Parts",
-    index: "05",
-    summary: "Wear and screening parts selected for quarry, aggregate and mineral-processing equipment.",
-    color: "copper",
-  },
 ];
 
 export const products: Product[] = [
@@ -1508,36 +1500,6 @@ export const products: Product[] = [
       ],
     },
   },
-  {
-    slug: "crusher-hammer",
-    name: "Crusher Hammer",
-    category: "crusher-mining-parts",
-    eyebrow: "Wear parts",
-    summary: "Replacement hammer supply matched to crusher type, drawing and wear conditions.",
-    description: "Crusher hammers can be sourced against equipment information, dimensions or drawings, with material selection aligned to impact and abrasion conditions.",
-    features: ["Drawing-based matching", "Material options by wear duty", "Export packaging support"],
-    applications: ["Hammer crushers", "Aggregate processing", "Mineral processing"],
-    specifications: [
-      { label: "Compatibility", value: "Matched to equipment or drawing" },
-      { label: "Material", value: "Selected to wear duty" },
-      { label: "Dimensions", value: "Customer-specified" },
-    ],
-  },
-  {
-    slug: "mine-screen-mesh",
-    name: "Mine Screen Mesh",
-    category: "crusher-mining-parts",
-    eyebrow: "Screening media",
-    summary: "Screening mesh configured around aperture, wire, panel size and material duty.",
-    description: "Industrial screen mesh for classification and separation in mining, quarrying and aggregate operations.",
-    features: ["Application-specific apertures", "Multiple edge configurations", "Size and material customization"],
-    applications: ["Quarry screens", "Aggregate sizing", "Mineral classification"],
-    specifications: [
-      { label: "Aperture", value: "Specified by application" },
-      { label: "Panel size", value: "Custom" },
-      { label: "Edge", value: "Matched to screen deck" },
-    ],
-  },
 ];
 
 export function getCategory(slug: string) {
@@ -1556,7 +1518,6 @@ const zhCategories: Record<string, Pick<Category, "name" | "shortName" | "summar
   "conveyor-belts": { name: "输送带", shortName: "输送带", summary: "适用于倾斜输送、高磨损工况和通用物料输送的工程输送带。" },
   "power-transmission-belts": { name: "橡胶制品", shortName: "橡胶制品", summary: "为动力传递与严苛工业工况配置的橡胶输送带、橡胶板及密封条等制品。" },
   "conveyor-components": { name: "输送机配件", shortName: "输送配件", summary: "用于冲击防护、斗式提升和维持输送系统高效运行的配件与五金。" },
-  "crusher-mining-parts": { name: "破碎机与矿山配件", shortName: "矿山配件", summary: "面向采石、骨料和矿物加工设备的耐磨件与筛分配件。" },
 };
 
 const zhProducts: Record<string, Omit<Product, "slug" | "category">> = {
@@ -2196,8 +2157,6 @@ const zhProducts: Record<string, Omit<Product, "slug" | "category">> = {
     },
     sourceUrl: "https://www.respowerbelt.com/h-col-154.html",
   },
-  "crusher-hammer": { name: "破碎机锤头", eyebrow: "耐磨件", summary: "根据破碎机类型、图纸和磨损工况匹配的替换锤头。", description: "可依据设备信息、尺寸或图纸供应破碎机锤头，并结合冲击和磨蚀工况选择材料。", features: ["按图纸匹配", "按磨损工况选择材料", "支持出口包装"], applications: ["锤式破碎机", "骨料加工", "矿物加工"], specifications: [{ label: "适配方式", value: "按设备或图纸匹配" }, { label: "材料", value: "根据磨损工况选择" }, { label: "尺寸", value: "客户指定" }] },
-  "mine-screen-mesh": { name: "矿用筛网", eyebrow: "筛分介质", summary: "根据孔径、丝径、网片尺寸和物料工况配置的筛网。", description: "用于矿山、采石和骨料作业中分级与分离的工业筛网。", features: ["按应用选择孔径", "多种边缘形式", "尺寸与材料可定制"], applications: ["采石筛分", "骨料分级", "矿物分选"], specifications: [{ label: "孔径", value: "根据应用指定" }, { label: "网片尺寸", value: "定制" }, { label: "边缘", value: "与筛机匹配" }] },
   "solid-woven-conveyor-belt": {
     name: "整芯输送带",
     eyebrow: "PVC / PVG 阻燃型",
