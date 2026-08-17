@@ -67,10 +67,10 @@ export const categories: Category[] = [
   },
   {
     slug: "power-transmission-belts",
-    name: "Power Transmission Belts",
-    shortName: "Transmission",
+    name: "Rubber Products",
+    shortName: "Rubber Products",
     index: "02",
-    summary: "Flat and profile belts for dependable mechanical power transfer across industrial equipment.",
+    summary: "Rubber belting, sheet and sealing products configured for dependable power transmission and industrial service.",
     color: "orange",
   },
   {
@@ -1577,7 +1577,7 @@ export function getProduct(categorySlug: string, productSlug: string) {
 
 const zhCategories: Record<string, Pick<Category, "name" | "shortName" | "summary">> = {
   "conveyor-belts": { name: "输送带", shortName: "输送带", summary: "适用于倾斜输送、高磨损工况和通用物料输送的工程输送带。" },
-  "power-transmission-belts": { name: "动力传动带", shortName: "传动带", summary: "为各类工业设备提供稳定机械动力传递的平带和型带。" },
+  "power-transmission-belts": { name: "橡胶制品", shortName: "橡胶制品", summary: "为动力传递与严苛工业工况配置的橡胶输送带、橡胶板及密封条等制品。" },
   "conveyor-components": { name: "输送机配件", shortName: "输送配件", summary: "用于冲击防护、斗式提升和维持输送系统高效运行的配件与五金。" },
   "rubber-products-hoses": { name: "橡胶制品与胶管", shortName: "橡胶与胶管", summary: "适用于严苛工况的工业橡胶板、密封件和胶管产品。" },
   "crusher-mining-parts": { name: "破碎机与矿山配件", shortName: "矿山配件", summary: "面向采石、骨料和矿物加工设备的耐磨件与筛分配件。" },
