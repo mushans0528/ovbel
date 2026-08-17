@@ -97,14 +97,6 @@ export const categories: Category[] = [
     summary: "Wear and screening parts selected for quarry, aggregate and mineral-processing equipment.",
     color: "copper",
   },
-  {
-    slug: "motors-drive-equipment",
-    name: "Motors & Drive Equipment",
-    shortName: "Drive Equipment",
-    index: "06",
-    summary: "Rotating and drive components for industrial machinery, conveyors and processing systems.",
-    color: "navy",
-  },
 ];
 
 export const products: Product[] = [
@@ -1569,36 +1561,6 @@ export const products: Product[] = [
       { label: "Edge", value: "Matched to screen deck" },
     ],
   },
-  {
-    slug: "industrial-electric-motor",
-    name: "Industrial Electric Motor",
-    category: "motors-drive-equipment",
-    eyebrow: "Prime mover",
-    summary: "Electric motor supply aligned to power, speed, voltage, mounting and protection requirements.",
-    description: "OVBEL supports motor selection for conveyors and industrial equipment, with electrical and mechanical configuration confirmed before quotation.",
-    features: ["Application-based selection", "Export voltage options", "Mounting and protection coordination"],
-    applications: ["Conveyor drives", "Processing machinery", "Industrial equipment"],
-    specifications: [
-      { label: "Power", value: "Selected to application" },
-      { label: "Voltage / frequency", value: "Market-specific" },
-      { label: "Mounting", value: "Matched to equipment" },
-    ],
-  },
-  {
-    slug: "industrial-bearing",
-    name: "Industrial Bearing",
-    category: "motors-drive-equipment",
-    eyebrow: "Rotating equipment",
-    summary: "Bearing supply matched by designation, dimensions, load, speed or equipment position.",
-    description: "Industrial bearing sourcing for conveyors, crushers and rotating machinery, including cross-reference support where identifiers are available.",
-    features: ["Designation and dimension matching", "Sealed and open options", "Cross-reference support"],
-    applications: ["Conveyor pulleys", "Crusher assemblies", "Industrial drive systems"],
-    specifications: [
-      { label: "Type", value: "Selected to load and speed" },
-      { label: "Dimensions", value: "Matched to equipment" },
-      { label: "Seal", value: "Open / shielded / sealed options" },
-    ],
-  },
 ];
 
 export function getCategory(slug: string) {
@@ -1619,7 +1581,6 @@ const zhCategories: Record<string, Pick<Category, "name" | "shortName" | "summar
   "conveyor-components": { name: "输送机配件", shortName: "输送配件", summary: "用于冲击防护、斗式提升和维持输送系统高效运行的配件与五金。" },
   "rubber-products-hoses": { name: "橡胶制品与胶管", shortName: "橡胶与胶管", summary: "适用于严苛工况的工业橡胶板、密封件和胶管产品。" },
   "crusher-mining-parts": { name: "破碎机与矿山配件", shortName: "矿山配件", summary: "面向采石、骨料和矿物加工设备的耐磨件与筛分配件。" },
-  "motors-drive-equipment": { name: "电机与驱动设备", shortName: "驱动设备", summary: "适用于工业机械、输送机和加工系统的旋转与驱动部件。" },
 };
 
 const zhProducts: Record<string, Omit<Product, "slug" | "category">> = {
@@ -2262,8 +2223,6 @@ const zhProducts: Record<string, Omit<Product, "slug" | "category">> = {
   },
   "crusher-hammer": { name: "破碎机锤头", eyebrow: "耐磨件", summary: "根据破碎机类型、图纸和磨损工况匹配的替换锤头。", description: "可依据设备信息、尺寸或图纸供应破碎机锤头，并结合冲击和磨蚀工况选择材料。", features: ["按图纸匹配", "按磨损工况选择材料", "支持出口包装"], applications: ["锤式破碎机", "骨料加工", "矿物加工"], specifications: [{ label: "适配方式", value: "按设备或图纸匹配" }, { label: "材料", value: "根据磨损工况选择" }, { label: "尺寸", value: "客户指定" }] },
   "mine-screen-mesh": { name: "矿用筛网", eyebrow: "筛分介质", summary: "根据孔径、丝径、网片尺寸和物料工况配置的筛网。", description: "用于矿山、采石和骨料作业中分级与分离的工业筛网。", features: ["按应用选择孔径", "多种边缘形式", "尺寸与材料可定制"], applications: ["采石筛分", "骨料分级", "矿物分选"], specifications: [{ label: "孔径", value: "根据应用指定" }, { label: "网片尺寸", value: "定制" }, { label: "边缘", value: "与筛机匹配" }] },
-  "industrial-electric-motor": { name: "工业电机", eyebrow: "动力源", summary: "根据功率、转速、电压、安装和防护要求配置的工业电机。", description: "OVBEL 为输送机和工业设备提供电机选型支持，在报价前确认电气和机械配置。", features: ["按应用选型", "支持出口市场电压", "安装与防护配置协调"], applications: ["输送机驱动", "加工机械", "工业设备"], specifications: [{ label: "功率", value: "根据应用选择" }, { label: "电压 / 频率", value: "按目标市场配置" }, { label: "安装方式", value: "与设备匹配" }] },
-  "industrial-bearing": { name: "工业轴承", eyebrow: "旋转设备", summary: "可根据型号、尺寸、载荷、转速或设备位置匹配供应的轴承。", description: "为输送机、破碎机和旋转机械提供工业轴承采购与型号交叉匹配支持。", features: ["型号与尺寸匹配", "开式、带防尘盖和密封型可选", "支持型号交叉查询"], applications: ["输送机滚筒", "破碎机总成", "工业驱动系统"], specifications: [{ label: "类型", value: "根据载荷与转速选择" }, { label: "尺寸", value: "与设备匹配" }, { label: "密封形式", value: "开式 / 防尘盖 / 密封" }] },
   "solid-woven-conveyor-belt": {
     name: "整芯输送带",
     eyebrow: "PVC / PVG 阻燃型",
