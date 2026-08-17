@@ -1387,7 +1387,7 @@ export const products: Product[] = [
   {
     slug: "industrial-rubber-sheet",
     name: "Industrial Rubber Sheet",
-    category: "rubber-products-hoses",
+    category: "power-transmission-belts",
     eyebrow: "General industrial and technical applications",
     summary: "Black industrial rubber sheet supplied in standard sheets or cut to customer dimensions, with a broad thickness range.",
     description: "Industrial rubber sheet is a general-purpose black rubber sheet for sealing, gasket fabrication, workshop lining, impact pads and technical applications. Sheets can be supplied in standard sizes or cut to project dimensions. The reference grade shown on the source page is an SBR / NR-SBR compound; other polymers, hardnesses and surface finishes are available on request.",
@@ -1469,7 +1469,7 @@ export const products: Product[] = [
   {
     slug: "rubber-seal-strip",
     name: "Rubber Seal Strip",
-    category: "rubber-products-hoses",
+    category: "power-transmission-belts",
     eyebrow: "Sealing and edge protection",
     summary: "Custom-cut EPDM rubber seal strip for waterproof, windproof, dustproof and edge-protective sealing.",
     description: "U-channel and bulb-edge EPDM rubber seal strips supplied to customer dimensions. The profile forms a flexible seal around panels, doors, hatches and sheet edges, with good weather, UV and ozone resistance for indoor and outdoor use.",
