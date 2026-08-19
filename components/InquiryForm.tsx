@@ -20,7 +20,7 @@ export function InquiryForm({ defaultProduct = "", productSlug = "", locale = "e
       String(data.get("message") || ""),
     ].join("\n"));
     setStatus(locale === "zh" ? "正在打开邮件应用并写入询盘内容。" : "Your email application is opening with the inquiry details.");
-    window.location.href = `mailto:sales@ovbel.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@ovbel.com?subject=${subject}&body=${body}`;
   }
 
   return (
@@ -31,7 +31,7 @@ export function InquiryForm({ defaultProduct = "", productSlug = "", locale = "e
       <label>{locale === "zh" ? "产品或零件参考" : "Product or part reference"}<input name="product" defaultValue={defaultProduct} placeholder={locale === "zh" ? "产品、型号、OEM 编号或图纸编号" : "Product, model, OEM number or drawing reference"} /></label>
       <label>{locale === "zh" ? "需求说明" : "Requirements"}<textarea name="message" rows={6} required placeholder={locale === "zh" ? "请说明尺寸、数量、材料、用途和工作条件。" : "Describe dimensions, quantity, material, application and operating conditions."} /></label>
       <button className="button" type="submit">{locale === "zh" ? "生成询盘邮件" : "Prepare inquiry email"}</button>
-      <p className="form-note">{locale === "zh" ? "当前版本会生成一封发送至 sales@ovbel.com 的邮件。公司邮箱启用后将接入安全表单提交。" : "This first version prepares an email to sales@ovbel.com. Secure form delivery will be connected when the company mailbox is activated."}</p>
+      <p className="form-note">{locale === "zh" ? "当前版本会生成一封发送至 info@ovbel.com 的邮件。公司邮箱启用后将接入安全表单提交。" : "This first version prepares an email to info@ovbel.com. Secure form delivery will be connected when the company mailbox is activated."}</p>
       <p className="form-status" role="status">{status}</p>
     </form>
   );
