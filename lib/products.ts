@@ -129,6 +129,7 @@ export const products: Product[] = [
     },
     sourceUrl: "https://www.respowerbelt.com/h-col-114.html",
     media: {
+      cover: "/products/chevron-conveyor-belt/chevron-production.webp",
       gallery: [
         "/products/chevron-conveyor-belt/chevron-production.webp",
         "/products/chevron-conveyor-belt/chevron-pattern.webp",
