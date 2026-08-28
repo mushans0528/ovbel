@@ -242,11 +242,12 @@ export const products: Product[] = [
     },
     sourceUrl: "https://www.respowerbelt.com/h-col-123.html",
     media: {
-      cover: "/products/rough-top-conveyor-belt/cover.webp",
+      cover: "/products/rough-top-conveyor-belt/1.webp",
       gallery: [
-        "/products/rough-top-conveyor-belt/surface-texture.webp",
-        "/products/rough-top-conveyor-belt/factory-rolling.webp",
-        "/products/rough-top-conveyor-belt/cross-section.webp",
+        "/products/rough-top-conveyor-belt/1.webp",
+        "/products/rough-top-conveyor-belt/2.webp",
+        "/products/rough-top-conveyor-belt/3.webp",
+        "/products/rough-top-conveyor-belt/4.webp",
       ],
     },
   },

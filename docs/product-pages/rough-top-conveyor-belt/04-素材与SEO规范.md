@@ -7,17 +7,17 @@
 
 | 路径 | 角色 | 尺寸 | 文件大小 | 渲染位置 |
 |---|---|---|---|---|
-| `/products/rough-top-conveyor-belt/cover.webp` | 入口封面 | 1536 × 1024 | ~46 KB | Hero（`ProductGallery` 首图） |
-| `/products/rough-top-conveyor-belt/surface-texture.webp` | 图库 | 1024 × 1024 | ~75 KB | 图库第 1 张 + 灯箱 |
-| `/products/rough-top-conveyor-belt/factory-rolling.webp` | 图库 | 1024 × 1024 | ~82 KB | 图库第 2 张 + 灯箱 |
-| `/products/rough-top-conveyor-belt/cross-section.webp` | 图库 | 1024 × 1024 | ~60 KB | 图库第 3 张 + 灯箱 |
+| `/products/rough-top-conveyor-belt/1.webp` | 入口封面 / Hero 首图 | 按原图比例 | ~884 KB | 首页产品卡（`ProductCard`）、OG 图、JSON-LD、详情页首图 |
+| `/products/rough-top-conveyor-belt/2.webp` | 图库 | 按原图比例 | ~367 KB | 图库第 1 张 + 灯箱 |
+| `/products/rough-top-conveyor-belt/3.webp` | 图库 | 按原图比例 | ~986 KB | 图库第 2 张 + 灯箱 |
+| `/products/rough-top-conveyor-belt/4.webp` | 图库 | 按原图比例 | ~102 KB | 图库第 3 张 + 灯箱 |
 
 ## 2. 图片生成策略
 
 - 由于原页面 HTTPS 证书在抓取环境无法验证，本次未把任何原站图片直接用于新站；
-- 4 张图片均按品牌设计思路（深蓝主色、橙色高亮、留白、信息层级清晰、专业现代感）使用 ImageGen 生成；
-- 所有图片均无第三方品牌水印、无人物肖像、无可识别设施标识；
-- 输出格式统一为 `.webp`，便于 Next.js `next/image` 直接优化。
+- 4 张图片为公司提供的真实产品照片（桌面文件夹「糙面带Rough Top Conveyor Belt」，文件名 1–4），按名称顺序对应封面（1）与图库（2/3/4）；
+- 原始格式为 png/jpg，已统一转换为 `.webp`（quality 90），便于 Next.js `next/image` 直接优化，且文件体积显著下降（如封面 8 MB → 884 KB）；
+- 上传前请确认图片无水印、无未授权第三方品牌或人物肖像。
 
 ## 3. 图片替换流程
 
