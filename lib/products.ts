@@ -477,12 +477,12 @@ export const products: Product[] = [
     },
     sourceUrl: "https://www.respowerbelt.com/h-col-115.html",
     media: {
-      cover: "/products/white-conveyor-belt/cover.webp",
+      cover: "/products/white-conveyor-belt/1.webp",
       gallery: [
-        "/products/white-conveyor-belt/cover.webp",
-        "/products/white-conveyor-belt/factory-overview.webp",
-        "/products/white-conveyor-belt/production-line.webp",
-        "/products/white-conveyor-belt/belt-detail.webp",
+        "/products/white-conveyor-belt/1.webp",
+        "/products/white-conveyor-belt/2.webp",
+        "/products/white-conveyor-belt/3.webp",
+        "/products/white-conveyor-belt/4.webp",
       ],
       technicalImages: [
         "/products/white-conveyor-belt/spec-table.webp",
