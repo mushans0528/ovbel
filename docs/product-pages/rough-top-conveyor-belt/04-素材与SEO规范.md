@@ -7,32 +7,33 @@
 
 | 路径 | 角色 | 尺寸 | 文件大小 | 渲染位置 |
 |---|---|---|---|---|
-| `/products/rough-top-conveyor-belt/1.webp` | 入口封面 / Hero 首图 | 按原图比例 | ~884 KB | 首页产品卡（`ProductCard`）、OG 图、JSON-LD、详情页首图 |
-| `/products/rough-top-conveyor-belt/2.webp` | 图库 | 按原图比例 | ~367 KB | 图库第 1 张 + 灯箱 |
-| `/products/rough-top-conveyor-belt/3.webp` | 图库 | 按原图比例 | ~986 KB | 图库第 2 张 + 灯箱 |
-| `/products/rough-top-conveyor-belt/4.webp` | 图库 | 按原图比例 | ~102 KB | 图库第 3 张 + 灯箱 |
+| `/products/rough-top-conveyor-belt/1.webp` | 入口封面 / Hero 首图 | 按原图比例 | ~86 KB | 首页产品卡（`ProductCard`）、OG 图、JSON-LD、详情页首图 |
+| `/products/rough-top-conveyor-belt/2.webp` | 图库 | 按原图比例 | ~124 KB | 图库第 2 张 + 灯箱 |
+| `/products/rough-top-conveyor-belt/3.webp` | 图库 | 按原图比例 | ~213 KB | 图库第 3 张 + 灯箱 |
+| `/products/rough-top-conveyor-belt/4.webp` | 图库 | 按原图比例 | ~99 KB | 图库第 4 张 + 灯箱 |
 
 ## 2. 图片生成策略
 
 - 由于原页面 HTTPS 证书在抓取环境无法验证，本次未把任何原站图片直接用于新站；
 - 4 张图片为公司提供的真实产品照片（桌面文件夹「糙面带Rough Top Conveyor Belt」，文件名 1–4），按名称顺序对应封面（1）与图库（2/3/4）；
-- 原始格式为 png/jpg，已统一转换为 `.webp`（quality 90），便于 Next.js `next/image` 直接优化，且文件体积显著下降（如封面 8 MB → 884 KB）；
+- 原始格式为 png/jpg，已统一转换为 `.webp`（quality 90），便于 Next.js `next/image` 直接优化，且文件体积显著下降（如封面 8 MB → 86 KB）；
 - 上传前请确认图片无水印、无未授权第三方品牌或人物肖像。
 
 ## 3. 图片替换流程
 
 当公司自有产品图库（CMS / 服务器 / 原图备份）确认可授权使用后，可按以下规则一对一替换，**保持文件名与目录不变**，无需修改代码：
 
-1. 将新图片命名为 `cover.webp / surface-texture.webp / factory-rolling.webp / cross-section.webp`；
+1. 将新图片按顺序命名为 `1.webp / 2.webp / 3.webp / 4.webp`；
 2. 放入 `public/products/rough-top-conveyor-belt/` 覆盖对应文件；
 3. 在 PR 中说明图片来源、版权归属、拍摄/制作者与日期；
 4. 在 `05-验收清单.md` 的"素材与权利"小节中勾选并签字。
 
 建议替换目标：
 
-- `cover.webp` 替换为公司拍摄的真实产品外观图；
-- `surface-texture.webp` 替换为上表面纹理的高分辨率近景；
-- `factory-rolling.webp` 替换为生产现场的真实照片；
+- `1.webp` 替换为公司拍摄的真实产品外观图（同时作为封面与图库首图）；
+- `2.webp` 替换为上表面纹理或叠放特写；
+- `3.webp` 替换为产品细节/纹理近景；
+- `4.webp` 替换为不同角度或应用场景照片；
 - `cross-section.webp` 可保留为技术示意图，或替换为带尺寸标注的工程图。
 
 ## 4. 图片权利与可追溯
