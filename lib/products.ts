@@ -178,12 +178,12 @@ export const products: Product[] = [
     },
     sourceUrl: "https://www.respowerbelt.com/h-col-120.html",
     media: {
-      cover: "/products/elevator-conveyor-belt/cover.jpg",
+      cover: "/products/elevator-conveyor-belt/1.webp",
       gallery: [
-        "/products/elevator-conveyor-belt/elevator-head-pulley-buckets.webp",
-        "/products/elevator-conveyor-belt/buckets-mounted-on-belt.webp",
-        "/products/elevator-conveyor-belt/bucket-mounting-detail.webp",
-        "/products/elevator-conveyor-belt/perforated-belt-roll-factory.webp",
+        "/products/elevator-conveyor-belt/1.webp",
+        "/products/elevator-conveyor-belt/2.webp",
+        "/products/elevator-conveyor-belt/3.webp",
+        "/products/elevator-conveyor-belt/4.webp",
       ],
     },
   },
