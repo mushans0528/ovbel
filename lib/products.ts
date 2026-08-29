@@ -400,13 +400,12 @@ export const products: Product[] = [
     },
     sourceUrl: "https://www.respowerbelt.com/h-col-119.html",
     media: {
-      cover: "/products/solid-woven-conveyor-belt/cover.webp",
+      cover: "/products/solid-woven-conveyor-belt/1.webp",
       gallery: [
-        "/products/solid-woven-conveyor-belt/cover.webp",
-        "/products/solid-woven-conveyor-belt/cross-section-stack.webp",
-        "/products/solid-woven-conveyor-belt/cross-section-folded.webp",
-        "/products/solid-woven-conveyor-belt/cross-section-flat.webp",
-        "/products/solid-woven-conveyor-belt/cross-section-angle.webp",
+        "/products/solid-woven-conveyor-belt/1.webp",
+        "/products/solid-woven-conveyor-belt/2.webp",
+        "/products/solid-woven-conveyor-belt/3.webp",
+        "/products/solid-woven-conveyor-belt/4.webp",
       ],
       technicalImages: [
         "/products/solid-woven-conveyor-belt/tensile-spec-table.webp",
