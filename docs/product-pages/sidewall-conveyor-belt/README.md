@@ -21,3 +21,10 @@
 - `03-实现规格.md`
 - `04-素材与SEO规范.md`
 - `05-验收清单.md`
+
+## 图片更新记录
+- 2026-08-29：产品图整体替换为实拍素材（`/Desktop/=挡边带Sidewall Conveyor Belt/` 1.png–4.png）
+  - 入口封面：`public/products/sidewall-conveyor-belt/1.webp`
+  - 详情页图库顺序：1.webp → 2.webp → 3.webp → 4.webp
+  - 旧图已移除：cover.webp、factory-overview.webp、long-belt-line.webp、large-rolls-stored.webp、rolled-product.webp
+  - 规格图 technicalImages 保持不变

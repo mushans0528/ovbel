@@ -308,13 +308,12 @@ export const products: Product[] = [
     },
     sourceUrl: "https://www.respowerbelt.com/h-col-118.html",
     media: {
-      cover: "/products/sidewall-conveyor-belt/cover.webp",
+      cover: "/products/sidewall-conveyor-belt/1.webp",
       gallery: [
-        "/products/sidewall-conveyor-belt/cover.webp",
-        "/products/sidewall-conveyor-belt/factory-overview.webp",
-        "/products/sidewall-conveyor-belt/long-belt-line.webp",
-        "/products/sidewall-conveyor-belt/large-rolls-stored.webp",
-        "/products/sidewall-conveyor-belt/rolled-product.webp",
+        "/products/sidewall-conveyor-belt/1.webp",
+        "/products/sidewall-conveyor-belt/2.webp",
+        "/products/sidewall-conveyor-belt/3.webp",
+        "/products/sidewall-conveyor-belt/4.webp",
       ],
       technicalImages: [
         "/products/sidewall-conveyor-belt/sidewall-types-spec.webp",
