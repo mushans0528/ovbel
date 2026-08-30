@@ -927,9 +927,15 @@ export const products: Product[] = [
       cover: "/products/transmission-flat-belt/cover.webp",
       gallery: [
         "/products/transmission-flat-belt/cover.webp",
-        "/products/transmission-flat-belt/cut-edge.webp",
-        "/products/transmission-flat-belt/round-edge.webp",
-        "/products/transmission-flat-belt/belt-roll.webp",
+        "/products/transmission-flat-belt/gallery-01.webp",
+        "/products/transmission-flat-belt/gallery-02.webp",
+        "/products/transmission-flat-belt/gallery-03.webp",
+      ],
+      galleryAlt: [
+        "Transmission flat belt — yellow cotton-canvas belt stacked on itself, showing the multi-ply fabric edge profile",
+        "Transmission flat belt — three lengths of brown cotton flat belting laid side by side with a red centre stripe",
+        "Transmission flat belt — wide folds of brown cotton flat belting with a red centre stripe, multiple plies visible at the edge",
+        "Transmission flat belt — full roll of yellow cotton flat belting strapped in three places, viewed end-on against white background",
       ],
       technicalImages: [
         "/products/transmission-flat-belt/ounce-grades-table.webp",
@@ -1729,6 +1735,21 @@ const zhProducts: Record<string, Omit<Product, "slug" | "category">> = {
       description: "棉帆布骨架平型传动带，28–36 OZ 多等级，切边与圆边两种结构，适用于工厂、矿山、码头、粮食加工、灌溉及木材切割传动。",
     },
     sourceUrl: "https://www.respowerbelt.com/h-col-121.html",
+    media: {
+      cover: "/products/transmission-flat-belt/cover.webp",
+      gallery: [
+        "/products/transmission-flat-belt/cover.webp",
+        "/products/transmission-flat-belt/gallery-01.webp",
+        "/products/transmission-flat-belt/gallery-02.webp",
+        "/products/transmission-flat-belt/gallery-03.webp",
+      ],
+      galleryAlt: [
+        "平型传动带 — 黄色棉帆布带多层堆叠，可见带边多层织物结构",
+        "平型传动带 — 三段棕色棉帆布平带并排展示，带体中央嵌红色识别线",
+        "平型传动带 — 棕色棉帆布平带大折展开，红色中线、多层带边清晰可见",
+        "平型传动带 — 整卷黄色棉帆布平带，三道绿色捆带固定，端面拍摄",
+      ],
+    },
   },
   "industrial-v-belt": {
     name: "普通包布 V 带",

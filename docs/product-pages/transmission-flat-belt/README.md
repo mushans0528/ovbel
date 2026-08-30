@@ -22,7 +22,8 @@
 5. [05-验收清单](./05-验收清单.md) — 验证项与结果。
 
 ## 资料纪律（适用于本包）
-- 来源站 `respowerbelt.com` 为 OVBEL 运营主体（山东奥贝尔工业有限公司，原 Shandong Respower Industrial Co., Ltd.）自有旧站，资料按自有资料使用。
+- 来源站 `respowerbelt.com` 为 OVBEL 运营主体（山东奥贝尔工业有限公司，原 Shandong Respower Industrial Co., Ltd.）自有旧站，**文字资料**按自有资料使用。
+- **图片素材**当前版本（v2，2026-08-30）由用户另行提供（`~/Desktop/=平胶带Transmission Flat Belt/`），为 OVBEL 自有产品实拍 PNG，已替换原 v1 来自 `respowerbelt.com` 的 4 张画廊图；v1 的 `RESPOWER` 水印相关风险已随本次替换消除。
 - 产品描述、应用列表、参数（28–36 OZ、切边/圆边结构说明）来自源页，逐字对齐；
 - 描述、优势、应用、规格为围绕事实的编辑性改写，不照搬原句；
 - 带宽范围、最大带速、具体型号尺寸表、库存/交期/MOQ/价格/保修 — **未在源页给出，禁止在页面展示，待业务确认**。
