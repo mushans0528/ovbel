@@ -1,6 +1,6 @@
 # 环形输送带 / Endless Conveyor Belt — 资料档案
 
-> 本文档为 OVBEL 网站新增产品详情页的配套资料档案，遵循与 `polyester-core-conveyor-belt` 一致的模板。
+> 本文档为 OVBEL 网站新增产品详情页的配套资料档案，遵循既有产品详情页模板。
 
 ## 基本信息
 
