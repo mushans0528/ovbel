@@ -6,35 +6,42 @@
 - 图片可点击全屏放大，灯箱**不显示放大镜装饰图标**（沿用 `ProductGallery`/`ZoomableImage`）。
 - 所有图片经 Pillow（隔离 venv）由源 PNG/JPG 转为 **webp**（与仓库 114 个 webp 资产生态一致）。
 
-## 2. 本次导入的真实素材
+## 2. 本次采用的真实素材
 
-来源：http://www.sjbelt.com/product/huan-xing-shu-song-dai-791.html（Fastimg CDN，需带 Referer 下载）
+来源：用户直接提供（OVBEL 自有产品照，原 PNG 已转 webp）。
 
-| 文件 | 原始 URL | 尺寸 | 类型 | 用途 |
+| 文件 | 源 PNG | 尺寸 | 用途 | 说明 |
 |---|---|---|---|---|
-| `cover.webp` | `…/500f4bd1-7bac-4baa-8419-4f021d7d39fe.png` | 957×341 | 主图/横幅 | cover + 画廊首图 |
-| `gallery-01.webp` | `…/dbde9578-5771-4ede-9663-ef16b984157c.jpg`（页面画廊命名「环形输送带.jpg」） | 600×450 | 产品照片 | 画廊 |
-| `gallery-02.webp` | `…/3e39f95f-dd62-4f91-a49d-e7c4fb2cfc19.jpg` | 344×344 | 产品图 | 画廊 |
+| `cover.webp` | `Desktop/.../1.png` | 800×730 | 封面 + 画廊首图 | 卷状展示，可清晰看到无接头环形结构 |
+| `gallery-01.webp` | `Desktop/.../2.png` | 800×680 | 画廊（细节） | 多层织物带芯结构 |
+| `gallery-02.webp` | `Desktop/.../3.png` | 800×524 | 画廊（平铺） | 平铺展开外观 |
+| `gallery-03.webp` | `Desktop/.../4.png` | 800×702 | 画廊（整面） | 整张平铺的顶部表面 |
 
-> 说明：原站仅此 3 张真实产品图（另有两个 `/npublic/img/s.png` 占位缩略图，已弃用）。直链下载被 CDN 拦截（返回 HTTP 567 / markdown 错误页），需带 `Referer: http://www.sjbelt.com/product/huan-xing-shu-song-dai-791.html` 方可获取。
+> 命名规则：`cover.webp` = 第 1 张（首图），`gallery-0X.webp` = 第 2/3/4 张，按用户提供的文件名顺序 1→2→3→4 排列。
+
+### 2.1 历史来源（仅作记录，不再使用）
+
+上一版（提交 `d652011`）的 3 张图（cover 957×341、gallery-01 600×450、gallery-02 344×344）来自第三方参考站 `sjbelt.com` 的 Fastimg CDN。本次已**全部替换**为 OVBEL 自有素材，规避第三方版权风险。
 
 ## 3. alt 文本
 
 | 图片 | EN alt | ZH alt |
 |---|---|---|
-| cover | Endless conveyor belt — main product view | 环形输送带 — 主视图 |
-| gallery-01 | Endless conveyor belt — product photo | 环形输送带 — 产品照片 |
-| gallery-02 | Endless conveyor belt — detail view | 环形输送带 — 细节视图 |
+| cover | Endless conveyor belt — rolled configuration showing the jointless loop | 环形输送带 — 卷状展示，可清晰看到无接头环形结构 |
+| gallery-01 | Endless conveyor belt — multi-layer fabric carcass detail | 环形输送带 — 多层织物带芯结构细节 |
+| gallery-02 | Endless conveyor belt — flat-laid overview | 环形输送带 — 平铺展开外观 |
+| gallery-03 | Endless conveyor belt — full-length flat top surface | 环形输送带 — 整张平铺的顶部表面 |
 
 ## 4. 待补充素材清单（Pending Business）
 
+> 当前 4 张已覆盖"整体 / 细节 / 平铺 / 整面"主要展示面，封面亦已替换为 OVBEL 自有素材。如需进一步丰富，可继续补充：
+
 | 编号 | 内容 | 优先级 |
 |---|---|---|
-| IMG-01 | OVBEL 自有环形输送带整体产品照（替代 cover，规避第三方版权） | 高 |
-| IMG-02 | 环形结构/接头处细节特写 | 中 |
-| IMG-03 | 装机运行实景图 | 中 |
-| IMG-04 | 织物/带芯剖面图（EP/NN/CC） | 低 |
-| IMG-05 | 应用行业场景图（矿山/港口等） | 低 |
+| IMG-02 | 环形结构/接头处细节特写（已有覆盖） | 低 |
+| IMG-04 | 织物/带芯剖面图（EP/NN/CC） | 中 |
+| IMG-05 | 应用行业场景图（矿山/港口等） | 中 |
+| IMG-06 | 装机运行实景图 | 中 |
 
 ## 5. SEO 文案
 
@@ -51,9 +58,9 @@
 - `canonical`：`https://<site>/{locale}/products/conveyor-belts/endless-conveyor-belt`
 - `hreflang`：`en`、`zh-CN`、`x-default`
 - Open Graph：`og:title`、`og:description`、`og:image`（cover）、`og:type=product`
-- JSON-LD：`Product` 类型（name、image[]、description、category、brand 等）
+- JSON-LD：`Product` 类型（name、image[] 含 cover + 3 张 gallery、description、category、brand 等）
 - 关键词建议：endless conveyor belt, jointless conveyor belt, 环形输送带, 无接头输送带, endless belt, nylon conveyor belt
 
-## 7. 合规提醒
+## 7. 合规状态
 
-⚠️ 当前图片来自第三方参考品牌站（浙江三元橡胶带）。在 OVBEL 正式上线前，**必须**替换为 OVBEL 自有、已获授权的产品照片，或取得原图使用授权，以避免版权风险。此事项已列入 `05-验收清单.md` 业务签核。
+✅ 已完成：4 张产品图全部替换为用户提供的 OVBEL 自有素材，第三方版权风险已消除。

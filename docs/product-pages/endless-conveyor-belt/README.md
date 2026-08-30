@@ -10,8 +10,9 @@
 | 产品英文名 | Endless Conveyor Belt |
 | slug | `endless-conveyor-belt` |
 | 分类 | `conveyor-belts`（输送带） |
-| 资料来源 | http://www.sjbelt.com/product/huan-xing-shu-song-dai-791.html |
-| 来源品牌 | ZHEJIANG SANJIA RUBBER BELT Co., Ltd.（第三方参考站，非 OVBEL） |
+| 资料来源（文字） | http://www.sjbelt.com/product/huan-xing-shu-song-dai-791.html（第三方参考站） |
+| **资料来源（图片）** | 用户直接提供的 OVBEL 自有产品照（`Desktop/=环形带Endless Conveyor Belt/{1,2,3,4}.png`） |
+| 来源品牌 | ZHEJIANG SANJIA RUBBER BELT Co., Ltd.（第三方参考站，仅文字资料；图片已替换） |
 | 目标分支 | `main` |
 | 提交方式 | 扩展统一产品模型 `lib/products.ts`（EN 条目 + ZH override），数据驱动自动派生页面 |
 
@@ -37,5 +38,5 @@
 
 - 原站为 JS 无关的传统页面，正文可直接抓取；图片为 Fastimg CDN，需带 Referer 才能下载（直链被拦截）。
 - 原站**未列出**任何产品标准/认证（如 GB/T、DIN 等），故规格中**未编造**标准字段。
-- 原站仅提供 3 张真实产品图（含一张命名为「环形输送带.jpg」的画廊图）；已下载并转 webp 用于 cover/gallery。
-- ⚠️ 图片来自第三方参考品牌站点，**版权待业务确认**：上线前建议替换为 OVBEL 自有、已获授权的产品照片（见 `04-素材与SEO规范.md` 与 `05-验收清单.md`）。
+- **产品图片已替换为 OVBEL 自有素材**（用户提供 4 张 PNG：cover + gallery-01/02/03），第三方版权风险已消除。
+- ✅ v1（提交 `d652011`）曾使用 sjbelt.com 的 3 张图作为临时占位，**v2 已全部替换**。
