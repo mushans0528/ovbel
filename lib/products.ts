@@ -711,6 +711,14 @@ export const products: Product[] = [
       gallery: [
         "/products/fire-resistant-conveyor-belt/cover.webp",
         "/products/fire-resistant-conveyor-belt/gallery-01.webp",
+        "/products/fire-resistant-conveyor-belt/gallery-02.webp",
+        "/products/fire-resistant-conveyor-belt/gallery-03.webp",
+      ],
+      galleryAlt: [
+        "Fire resistant conveyor belt — heavy black rubber belt rolled into a thick cylinder, smooth flame-retardant cover visible",
+        "Fire resistant conveyor belt — large roll of black rubber belting viewed end-on, multi-ply fabric body with a slight warp",
+        "Fire resistant conveyor belt — full roll of black flame-retardant belt showing the concentric layered edges wound around a yellow core",
+        "Fire resistant conveyor belt — wide folded black flame-retardant belt, multiple plies visible at the curved edge",
       ],
     },
   },
@@ -2562,6 +2570,21 @@ const zhProducts: Record<string, Omit<Product, "slug" | "category">> = {
       description: "棉帆布、尼龙帆布或 EP 帆布阻燃输送带，具有阻燃、抗静电性能，适用于煤矿、电力、化工、轻工、冶金、粮食加工等易燃易爆场所的散料输送。",
     },
     sourceUrl: "https://www.respowerbelt.com/h-col-135.html",
+    media: {
+      cover: "/products/fire-resistant-conveyor-belt/cover.webp",
+      gallery: [
+        "/products/fire-resistant-conveyor-belt/cover.webp",
+        "/products/fire-resistant-conveyor-belt/gallery-01.webp",
+        "/products/fire-resistant-conveyor-belt/gallery-02.webp",
+        "/products/fire-resistant-conveyor-belt/gallery-03.webp",
+      ],
+      galleryAlt: [
+        "阻燃输送带 — 黑色橡胶带厚卷成筒状，可见光滑阻燃覆盖胶",
+        "阻燃输送带 — 黑色橡胶带大卷端面拍摄，多层织物带芯略带弧形",
+        "阻燃输送带 — 整卷黑色阻燃带围绕黄色芯轴呈同心层绕",
+        "阻燃输送带 — 黑色阻燃带大幅折叠展开，曲边可见多层带体",
+      ],
+    },
   },
   "ep-nylon-conveyor-belt": {
     name: "EP/尼龙输送带",
