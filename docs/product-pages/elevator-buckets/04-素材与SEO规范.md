@@ -2,26 +2,52 @@
 
 ## 1. 图片素材
 
-所有图片均下载自 OVBEL 自有 CDN（`30745609.s21i.faiusr.com`），已获使用授权。
+### v2（详情页图库当前）
+
+4 张详情页图库图片均来自 OVBEL 自有产品素材（由用户提供，`~/Desktop/未命名文件夹/畚斗Elevator Buckets/` 目录，命名为 `1.jpg`、`2.png`、`3.jpg`、`4.jpg`），2026-09-01 替换 v1。
 
 | 源文件 | 输出文件 | 内容说明 | 尺寸（转换后） | 用途 |
 |---|---|---|---|---|
-| img4.webp | `cover.webp` | 彩色塑料料斗组合图 | 598 × 599 | 封面 / JSON-LD / OG |
-| img1.webp | `gallery-01.webp` | 不锈钢料斗实物图（两件） | 801 × 603 | 图库 |
-| img2.webp | `gallery-02.webp` | 不锈钢料斗实物图（单件侧视） | 655 × 599 | 图库 |
-| img3.webp | `gallery-03.webp` | 不锈钢料斗实物图（三孔近景） | 645 × 648 | 图库 |
-| img5.webp | `material-comparison-table.webp` | 材料性能对比表 | 1488 × 704 | 技术图 |
-| img6.webp | `material-applications-table.webp` | 材料应用场景表 | 939 × 684 | 技术图 |
-| img7.webp | `dimension-drawing.webp` | 料斗尺寸参数图 | 1222 × 542 | 技术图 |
+| 1.jpg | `cover.webp` | 白色 HDPE 塑料提升机料斗，正面矩形视图，三个安装孔清晰可见（hero / #1） | 1200 × 1200 | 封面 / JSON-LD / OG |
+| 2.png | `gallery-01.webp` | 白色塑料料斗 V 形剖面/俯视，三个安装孔位 | 800 × 800 | 图库 |
+| 3.jpg | `gallery-02.webp` | 橙色/红色 HDPE 塑料料斗，锥形矩形剖面 | 800 × 800 | 图库 |
+| 4.jpg | `gallery-03.webp` | 不锈钢料斗，拉丝金属表面，可见安装孔 | 1000 × 1000 | 图库 |
+
+### v1（旧参考资源，仍保留）
+
+v1 引用过 6 张来自参考站（respowerbelt.com）的塑料/不锈钢料斗图，命名沿用 `cover.webp` + `gallery-01.webp` / `gallery-02.webp` / `gallery-03.webp`。本次 v2 直接覆盖 `cover.webp` 与 `gallery-01.webp` / `gallery-02.webp` / `gallery-03.webp` 4 个文件名；图片内容已替换为 OVBEL 自有素材，版权风险消除。
+
+### 技术图（保留不动）
+
+`media.technicalImages` 中的 3 张技术图独立于图库之外，未参与本次替换。
+
+| 输出文件 | 内容说明 | 用途 |
+|---|---|---|
+| `material-comparison-table.webp` | 6 种材料性能对比表 | 规格章节 |
+| `material-applications-table.webp` | 6 种材料应用场景表 | 规格章节 |
+| `dimension-drawing.webp` | 料斗尺寸参数图 | 技术资料 |
 
 ### 技术处理
-- 输出格式：WebP，quality 92，method 6。
-- 图库照片最大边 1600 px；规格表/结构图最大边 2400 px 以保留可读性。
-- RGB 模式；无透明通道转换。
+- 输出格式：WebP，quality 88，method 4。
+- 长边封顶 1920 px（本次源图长边均 ≤ 1200 px，未缩放）。
+- RGB 模式；无透明通道转换；对 `RGBA`/`P`（调色板）源图自动 `convert("RGB")`。
+- 工具：托管 Python venv（Pillow）。
 
 ### Alt 文本
-- 图库图片：由 `ProductGallery` 使用 `productName` 自动生成，例如 `Elevator Buckets product view` / `提升机料斗产品图`。
-- 技术图：由 `ZoomableImage` 使用文档标签索引，例如 `Elevator Buckets — Documents 1` / `提升机料斗 — 技术资料 1`。
+
+v2 起 EN 与 ZH 各自显式提供 4 条 `galleryAlt`，描述每张图的内容（材料、形状、视角）。
+
+- EN：
+  - `White HDPE elevator bucket, rectangular front view with three mounting holes`
+  - `White plastic elevator bucket viewed from above showing V-profile and mounting holes`
+  - `Orange HDPE elevator bucket, tapered rectangular profile`
+  - `Stainless steel elevator bucket, brushed metal finish with mounting holes`
+- ZH：
+  - `白色 HDPE 提升机料斗，正面矩形视图，可见三个安装孔`
+  - `白色塑料提升机料斗，俯视显示 V 形剖面及安装孔位`
+  - `橙色 HDPE 提升机料斗，锥形矩形剖面`
+  - `不锈钢提升机料斗，拉丝金属表面，可见安装孔`
+- 技术图：由 `ZoomableImage` 使用文档标签索引（例如 `Elevator Buckets — Documents 1` / `提升机料斗 — 技术资料 1`）。
 
 ## 2. SEO 规范
 

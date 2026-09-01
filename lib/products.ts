@@ -1223,9 +1223,16 @@ export const products: Product[] = [
     media: {
       cover: "/products/elevator-buckets/cover.webp",
       gallery: [
+        "/products/elevator-buckets/cover.webp",
         "/products/elevator-buckets/gallery-01.webp",
         "/products/elevator-buckets/gallery-02.webp",
         "/products/elevator-buckets/gallery-03.webp",
+      ],
+      galleryAlt: [
+        "White HDPE elevator bucket, rectangular front view with three mounting holes",
+        "White plastic elevator bucket viewed from above showing V-profile and mounting holes",
+        "Orange HDPE elevator bucket, tapered rectangular profile",
+        "Stainless steel elevator bucket, brushed metal finish with mounting holes",
       ],
       technicalImages: [
         "/products/elevator-buckets/material-comparison-table.webp",
@@ -1845,6 +1852,26 @@ const zhProducts: Record<string, Omit<Product, "slug" | "category">> = {
       description: "OVBEL 提升机料斗提供低碳钢、不锈钢、HDPE、尼龙 6、增强尼龙和 PU 六种材料，12 个以上系列、近 400 个尺寸参考，适用于粮食、食品及工业垂直输送。",
     },
     sourceUrl: "https://www.respowerbelt.com/h-col-129.html",
+    media: {
+      cover: "/products/elevator-buckets/cover.webp",
+      gallery: [
+        "/products/elevator-buckets/cover.webp",
+        "/products/elevator-buckets/gallery-01.webp",
+        "/products/elevator-buckets/gallery-02.webp",
+        "/products/elevator-buckets/gallery-03.webp",
+      ],
+      galleryAlt: [
+        "白色 HDPE 提升机料斗，正面矩形视图，可见三个安装孔",
+        "白色塑料提升机料斗，俯视显示 V 形剖面及安装孔位",
+        "橙色 HDPE 提升机料斗，锥形矩形剖面",
+        "不锈钢提升机料斗，拉丝金属表面，可见安装孔",
+      ],
+      technicalImages: [
+        "/products/elevator-buckets/material-comparison-table.webp",
+        "/products/elevator-buckets/material-applications-table.webp",
+        "/products/elevator-buckets/dimension-drawing.webp",
+      ],
+    },
   },
   "belt-fastener": {
     name: "输送带扣",
