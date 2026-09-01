@@ -1143,13 +1143,15 @@ export const products: Product[] = [
       cover: "/products/impact-bed/cover.webp",
       gallery: [
         "/products/impact-bed/cover.webp",
-        "/products/impact-bed/impact-bars-red.webp",
-        "/products/impact-bed/impact-bars-blue-trough.webp",
-        "/products/impact-bed/impact-bars-red-stack.webp",
-        "/images/products/impact-bed/impact-bed-installed.webp",
-        "/images/products/impact-bed/impact-bed-set.webp",
-        "/images/products/impact-bed/impact-bar-black.webp",
-        "/images/products/impact-bed/impact-bar-red.webp",
+        "/products/impact-bed/gallery-01.webp",
+        "/products/impact-bed/gallery-02.webp",
+        "/products/impact-bed/gallery-03.webp",
+      ],
+      galleryAlt: [
+        "Impact Bed & Bar — two blue polyurethane V-profile impact bars standing vertically against a dark background (hero)",
+        "Impact Bed & Bar — stacked red rubber impact bars showing thickness profile and energy-absorbing body",
+        "Impact Bed & Bar — multiple red impact bars installed in a conveyor skirt-sealing zone on an orange support frame",
+        "Impact Bed & Bar — black rubber impact bars mounted on a red-painted steel bed frame with row of fixing bolts",
       ],
       constructionImage: "/images/products/impact-bed/impact-bar-red.webp",
       technicalImages: [
@@ -1904,6 +1906,30 @@ const zhProducts: Record<string, Omit<Product, "slug" | "category">> = {
     inquiryChecklist: ["带宽与带速", "物料及最大块度", "落差", "落料区长度", "现有托辊布置", "现场照片或图纸"],
     seo: { title: "输送机落料区缓冲床与缓冲条", description: "为输送机落料区、转运点和重型散料工况配置的缓冲床及 UHMWPE 三层橡胶缓冲条。" },
     sourceUrl: "https://www.respowerbelt.com/h-col-128.html",
+    media: {
+      cover: "/products/impact-bed/cover.webp",
+      gallery: [
+        "/products/impact-bed/cover.webp",
+        "/products/impact-bed/gallery-01.webp",
+        "/products/impact-bed/gallery-02.webp",
+        "/products/impact-bed/gallery-03.webp",
+      ],
+      galleryAlt: [
+        "缓冲床与缓冲条 — 蓝色聚氨酯 V 形缓冲条两根并行立放，深色背景（主图）",
+        "缓冲床与缓冲条 — 红色橡胶缓冲条堆叠展示，可见厚度与吸能层",
+        "缓冲床与缓冲条 — 缓冲条安装于裙板密封区，红色橡胶配合橙色支撑架",
+        "缓冲床与缓冲条 — 黑色橡胶缓冲条成排安装于红色钢架床体，底部固定螺栓可见",
+      ],
+      constructionImage: "/images/products/impact-bed/impact-bar-red.webp",
+      technicalImages: [
+        "/products/impact-bed/spec-table.webp",
+        "/products/impact-bed/type-a-drawing.webp",
+        "/products/impact-bed/type-b-drawing.webp",
+        "/images/products/impact-bed/technical-drawing.png",
+        "/images/products/impact-bed/specification-table.png",
+        "/images/products/impact-bed/specification-notes.png",
+      ],
+    },
   },
   "polyurethane-belt-cleaner": {
     name: "聚氨酯清扫器",
