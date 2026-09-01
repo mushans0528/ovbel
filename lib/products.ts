@@ -1312,15 +1312,13 @@ export const products: Product[] = [
       cover: "/products/belt-fastener/cover.webp",
       gallery: [
         "/products/belt-fastener/cover.webp",
+        "/products/belt-fastener/gallery-01.webp",
         "/products/belt-fastener/gallery-02.webp",
-        "/products/belt-fastener/gallery-03.webp",
-        "/products/belt-fastener/gallery-04.webp",
       ],
       galleryAlt: [
-        "Galvanized conveyor belt fastener plates, bolts and nuts",
-        "Assembled dark-finish conveyor belt fastener viewed from both sides",
-        "Dark-finish conveyor belt fastener plates with bolts and nuts",
-        "Close-up of two conveyor belt fastener plates and joining hardware",
+        "Galvanized conveyor belt fastener plates stamped 1 1/2\" stacked together, close-up",
+        "Galvanized conveyor belt fastener plates stamped 1 1/2\" laid side by side with bolts and nuts",
+        "Galvanized conveyor belt fastener plates and bolts stacked together, multiple angle view",
       ],
       technicalImages: [
         "/products/belt-fastener/model-selection-table.png",
@@ -1942,15 +1940,13 @@ const zhProducts: Record<string, Omit<Product, "slug" | "category">> = {
       cover: "/products/belt-fastener/cover.webp",
       gallery: [
         "/products/belt-fastener/cover.webp",
+        "/products/belt-fastener/gallery-01.webp",
         "/products/belt-fastener/gallery-02.webp",
-        "/products/belt-fastener/gallery-03.webp",
-        "/products/belt-fastener/gallery-04.webp",
       ],
       galleryAlt: [
-        "镀锌输送带扣的扣板、螺栓与螺母",
-        "从两个角度展示的深色输送带扣组件",
-        "深色输送带扣扣板、螺栓与螺母",
-        "两片输送带扣扣板与连接五金特写",
+        "镀锌输送带扣扣板（冲压 1 1/2 标识）多片堆叠的特写",
+        "镀锌输送带扣扣板（冲压 1 1/2 标识）与配套螺栓、螺母并排摆放",
+        "镀锌输送带扣扣板与配套螺栓多角度堆叠展示",
       ],
       technicalImages: [
         "/products/belt-fastener/model-selection-table.png",
