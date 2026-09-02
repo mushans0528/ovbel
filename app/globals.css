@@ -166,8 +166,7 @@ p { margin-top: 0; }
 .cta-inner { min-height: 250px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
 .cta-inner h2 { max-width: 760px; margin-bottom: 0; color: white; }
 
-.page-hero { padding: 100px 0 86px; color: white; background: linear-gradient(115deg, #061f3d, #0b3a6e 68%, #1e50ae); }
-.products-hero { min-height: 50vh; padding: 64px 0 52px; }
+.page-hero { min-height: 50vh; padding: 64px 0 52px; color: white; background: linear-gradient(115deg, #061f3d, #0b3a6e 68%, #1e50ae); }
 .page-hero h1 { max-width: 930px; margin-bottom: 26px; color: white; font-size: clamp(2.8rem, 5vw, 5.1rem); }
 .page-hero p:not(.eyebrow) { max-width: 760px; color: #cad9e8; font-size: 1.05rem; }
 .category-hero { position: relative; }
