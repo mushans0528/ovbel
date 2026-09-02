@@ -100,7 +100,7 @@ p { margin-top: 0; }
 .category-index { color: var(--orange); font-weight: 900; letter-spacing: .1em; }
 
 .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-.product-grid-two { grid-template-columns: repeat(2, 1fr); }
+.product-grid-two { grid-template-columns: repeat(4, 1fr); }
 .product-card { display: flex; flex-direction: column; background: white; border: 1px solid var(--line); transition: transform .2s ease, box-shadow .2s ease; }
 .product-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(6,31,61,.12); }
 .product-card-body { padding: 27px 28px 30px; display: flex; flex-direction: column; flex: 1; }
@@ -351,7 +351,7 @@ p { margin-top: 0; }
   .hero-inner { grid-template-columns: 1fr; min-height: auto; }
   .hero-machine { min-height: 310px; }
   .rail-one { right: 5%; }.rail-two { right: 22%; }
-  .category-grid, .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .category-grid, .product-grid, .product-grid-two { grid-template-columns: repeat(2, 1fr); }
   .industries-grid, .why-grid, .product-detail-grid, .editorial-grid, .contact-grid, .quote-grid { gap: 50px; }
   .product-overview, .product-handling-grid, .impact-construction-grid { gap: 55px; }
   .product-inquiry-plan { grid-template-columns: 1fr 1fr; }.product-inquiry-plan .button { justify-self: start; }
